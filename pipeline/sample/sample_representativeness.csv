@@ -1,0 +1,5 @@
+group,variable,population_mean,sample_mean_unweighted,sample_mean_weighted,SMD_weighted,n_population,n_sample
+ALL,log_text_chars,5.838,5.815,5.815,-0.017,10027,1200
+ALL,language=english,0.437,0.412,0.412,-0.052,10027,1200
+ALL,log_hours_total,7.638,7.64,7.64,0.002,10027,1200
+ALL,review_year,2020.058,2020.048,2020.048,-0.004,10027,1200

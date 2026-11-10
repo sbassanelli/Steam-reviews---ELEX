@@ -1,0 +1,2387 @@
+{
+  "mode": "inductive",
+  "model": "phi4:latest",
+  "context": "Steam reviews of ELEX, a single-player open-world action role-playing game",
+  "procedure": "embedding clustering → LLM naming → test by two coders → merge of inseparable sub-themes / LLM revision",
+  "embedding_model": "nomic-embed-text:latest",
+  "evaluation_models": [
+    "phi4:latest",
+    "gemma4:latest"
+  ],
+  "max_subthemes_per_theme": 5,
+  "dataset": "24a402b1ec19",
+  "themes": {
+    "STORYTELLING": [
+      {
+        "id": "ST1",
+        "name": "Factions and Lore",
+        "definition": "This sub-theme encompasses the narrative elements related to the game's factions, including their ideologies, lore, and the player's choices regarding joining or interacting with them. It distinguishes itself from other sub-themes by focusing specifically on the narrative depth and complexity of faction-related content, rather than general world-building or character development.",
+        "example_codes": [
+          "multiple faction choices (4)",
+          "well-developed factions (3)",
+          "faction ideology (3)",
+          "distinctive factions and lore (3)",
+          "multiple distinct factions (2)"
+        ]
+      },
+      {
+        "id": "ST2",
+        "name": "Narrative Quality",
+        "definition": "This sub-theme addresses the overall quality of the game's writing, including dialogue, plot, and the ending. It is distinct from other sub-themes by focusing on the craftsmanship of the narrative elements themselves, rather than their integration into gameplay or world-building.",
+        "example_codes": [
+          "poor writing quality (5)",
+          "unsatisfying ending (3)",
+          "poor quality writing (2)",
+          "successful blend of series elements (2)"
+        ]
+      },
+      {
+        "id": "ST3",
+        "name": "Story Engagement",
+        "definition": "This sub-theme captures the player's engagement with the main and side stories, including the depth and consequence of the story, and the player's agency within it. It is distinct from other sub-themes by focusing on the player's emotional and intellectual engagement with the story, rather than the structural or thematic elements of the narrative.",
+        "example_codes": [
+          "engaging main story (2)",
+          "depth and consequence in story (2)",
+          "player agency in story (2)",
+          "praise for story elements (1)"
+        ]
+      },
+      {
+        "id": "ST4",
+        "name": "World Building",
+        "definition": "This sub-theme focuses on the creation and consistency of the game's fictional world, including its setting, atmosphere, and the integration of various elements into a cohesive universe. It is distinct from other sub-themes by concentrating on the spatial and environmental aspects of the narrative, rather than character or plot development.",
+        "example_codes": [
+          "inconsistent world building (5)",
+          "strong world building (4)",
+          "immersive world (3)",
+          "vast and immersive world (2)"
+        ]
+      },
+      {
+        "id": "ST5",
+        "name": "Character Development",
+        "definition": "This sub-theme pertains to the depth, complexity, and memorability of the game's characters, including their motivations, development, and the player's relationship with them. It is distinct from other sub-themes by focusing on the individual characters and their arcs, rather than the broader narrative or world-building elements.",
+        "example_codes": [
+          "interesting characters (6)",
+          "memorable characters (4)",
+          "complex character motivations (3)",
+          "unlikable main character (3)"
+        ]
+      }
+    ],
+    "MECHANICS": [
+      {
+        "id": "ME1",
+        "name": "Combat Dynamics",
+        "definition": "This sub-theme focuses on the immediate interaction and overarching design of the game's combat system, including the feel, controls, variety, depth, balance, and player satisfaction. It excludes character progression elements, movement mechanics, and world interaction mechanics.",
+        "example_codes": [
+          "extreme hitboxes",
+          "easy evasion from enemies",
+          "sneaking as a viable strategy",
+          "mechanics of stamina-based combat",
+          "lack of shooting while seated",
+          "avoiding combat through evasion"
+        ],
+        "merged_from": [
+          "Combat Mechanics",
+          "Combat System"
+        ],
+        "merge_evidence": {
+          "pair": [
+            "ME1",
+            "ME2"
+          ],
+          "confusion": 0.126,
+          "similarity": 0.965
+        }
+      },
+      {
+        "id": "ME2",
+        "name": "Movement and Evasion",
+        "definition": "This sub-theme involves the mechanics of character movement, navigation, and evasion within the game world, including controls, hit detection, and strategies for avoiding combat. It is distinct from combat dynamics and world interaction mechanics.",
+        "example_codes": [
+          "using jetpack for ranged combat",
+          "suggestion to use jumping instead of dodging",
+          "avoiding combat through evasion"
+        ]
+      },
+      {
+        "id": "ME3",
+        "name": "Character Progression",
+        "definition": "This sub-theme covers systems related to character development, including skill trees, attributes, and progression mechanics. It is distinct from combat dynamics, movement mechanics, and world interaction mechanics.",
+        "example_codes": [
+          "combat became possible after growth",
+          "magic and psionics are unimpressive",
+          "developers balance difficulty with character requirements",
+          "progressive combat learning curve",
+          "practice improves survival and access"
+        ]
+      },
+      {
+        "id": "ME4",
+        "name": "Exploration and Resource Management",
+        "definition": "This sub-theme captures the player's experience with exploring the game world and managing resources, including crafting and inventory management. It is distinct from combat dynamics, character progression, and movement mechanics.",
+        "example_codes": [
+          "inventory management during combat",
+          "emphasis on danger",
+          "wildlife as genuine threat"
+        ]
+      },
+      {
+        "id": "ME5",
+        "name": "Companion Interaction",
+        "definition": "This sub-theme focuses on the role and effectiveness of companions in the game, including their assistance in combat and exploration. It is distinct from character progression and movement mechanics.",
+        "example_codes": [
+          "companion assistance in combat",
+          "companion effectiveness in exploration",
+          "companion behavior during missions"
+        ]
+      }
+    ],
+    "CHALLENGE": [
+      {
+        "id": "CH1",
+        "name": "Early Game Difficulty",
+        "definition": "This sub-theme captures the initial challenge players face, focusing on the difficulty level and balance at the start of the game. It distinguishes itself from other sub-themes by specifically addressing the early stages of gameplay, where players often encounter steep learning curves and potentially unfair difficulty spikes.",
+        "example_codes": [
+          "challenging early game",
+          "extremely difficult early game",
+          "high initial difficulty",
+          "unfair difficulty early on",
+          "very difficult early on"
+        ]
+      },
+      {
+        "id": "CH2",
+        "name": "Enemy Strength and Balance",
+        "definition": "This sub-theme addresses the perceived power and balance of enemies throughout the game. It focuses on how enemy strength can impact player experience, distinguishing itself from other sub-themes by specifically examining the fairness and balance of enemy encounters, rather than the overall difficulty or combat mechanics.",
+        "example_codes": [
+          "enemies too strong early on",
+          "overpowered enemies",
+          "unfair enemy strength",
+          "enemies too strong for player",
+          "unbalanced enemy strength"
+        ]
+      },
+      {
+        "id": "CH3",
+        "name": "Difficulty Curve and Scaling",
+        "definition": "This sub-theme explores the progression and scaling of difficulty throughout the game. It is distinct from other sub-themes by focusing on how difficulty changes over time, including any spikes or inconsistencies, rather than the immediate challenge or enemy encounters.",
+        "example_codes": [
+          "difficulty curve",
+          "unfair difficulty curve",
+          "poor difficulty balance",
+          "unpredictable difficulty curve",
+          "inconsistent difficulty scaling"
+        ]
+      },
+      {
+        "id": "CH4",
+        "name": "Combat Challenge",
+        "definition": "This sub-theme examines the difficulty and balance of combat mechanics, specifically focusing on how challenging combat is for players. It is distinct from other sub-themes by concentrating on the mechanics and execution of combat, rather than the broader difficulty or enemy encounters.",
+        "example_codes": [
+          "challenging combat",
+          "difficult early combat",
+          "frustrating early combat",
+          "initial combat difficulty",
+          "unnecessarily difficult combat"
+        ]
+      },
+      {
+        "id": "CH5",
+        "name": "Overall Difficulty and Mastery",
+        "definition": "This sub-theme captures the general perception of the game's difficulty and the sense of mastery players achieve. It distinguishes itself by addressing the overall challenge and the rewarding nature of overcoming it, rather than specific aspects like early game difficulty or combat mechanics.",
+        "example_codes": [
+          "high difficulty level",
+          "difficulty causing frustration",
+          "ultimately rewarding",
+          "sense of mastery",
+          "challenging gameplay"
+        ]
+      }
+    ],
+    "PROGRESSION_CONTENT": [
+      {
+        "id": "PR1",
+        "name": "Quest Diversity and Quantity",
+        "definition": "This sub-theme focuses on the range and number of quests, including side quests, available for character progression. It is distinct from content volume by concentrating solely on the structure and availability of quests, without considering the overall content or progression mechanics.",
+        "example_codes": [
+          "abundant side content",
+          "quest variety",
+          "limited quest options"
+        ]
+      },
+      {
+        "id": "PR2",
+        "name": "Content Volume and Quality",
+        "definition": "This sub-theme addresses the overall amount and quality of content available in the game, including undiscovered content and its engagement level. It is distinct from gameplay duration by focusing on the sheer volume and quality of content, rather than the temporal experience of playing the game.",
+        "example_codes": [
+          "high-quality content",
+          "repetitive and meaningless traversal",
+          "engaging world exploration"
+        ]
+      },
+      {
+        "id": "PR3",
+        "name": "Progression Speed and Reward Balance",
+        "definition": "This sub-theme captures the speed of character progression and the balance between effort and reward. It is differentiated from character growth by focusing on the temporal aspect of progression and the satisfaction derived from rewards, rather than long-term character development.",
+        "example_codes": [
+          "lack of ability progression for gear",
+          "steady character improvement",
+          "slow and repetitive character growth"
+        ]
+      },
+      {
+        "id": "PR4",
+        "name": "Gameplay Duration and Engagement",
+        "definition": "This sub-theme focuses on the length of gameplay and the player's engagement throughout the game's duration. It is distinct from content volume by emphasizing the temporal experience of playing the game, rather than the specific content or progression mechanics.",
+        "example_codes": [
+          "content pacing declines towards end",
+          "encourages continuous exploration",
+          "long-term content engagement"
+        ]
+      },
+      {
+        "id": "PR5",
+        "name": "Character Growth and Replayability",
+        "definition": "This sub-theme combines aspects of character growth over time with the game's replayability, highlighting how character progression and the game's design encourage multiple playthroughs. It stands apart from progression speed by linking long-term character development directly with the game's replay value.",
+        "example_codes": [
+          "leveling up over time",
+          "reaching high character ranks",
+          "eventual completion of skill and stat progression"
+        ]
+      }
+    ],
+    "ONBOARDING": [
+      {
+        "id": "ON1",
+        "name": "Learning Curve",
+        "definition": "This sub-theme captures the difficulty and steepness of the initial learning process, focusing on how intuitive or challenging the game is for new players to understand its mechanics and rules. It is distinct from the general difficulty experienced after the player has learned the game, which falls under CHALLENGE.",
+        "example_codes": [
+          "steep learning curve",
+          "difficult initial learning curve",
+          "requires learning time, not intuitive",
+          "challenging initial learning curve",
+          "learning happens through progress"
+        ]
+      },
+      {
+        "id": "ON2",
+        "name": "Guidance and Direction",
+        "definition": "This sub-theme addresses the presence or absence of guidance and direction provided to players at the beginning of the game. It focuses on how well the game directs players on what to do or where to go, distinguishing it from the lack of information in menus, which is categorized under UI.",
+        "example_codes": [
+          "poor initial guidance",
+          "lack of early guidance",
+          "lack of initial direction",
+          "early guidance on safe travel",
+          "difficulty finding direction early on"
+        ]
+      },
+      {
+        "id": "ON3",
+        "name": "Initial Gameplay Experience",
+        "definition": "This sub-theme encompasses the overall experience of the early game, including its difficulty and how engaging or frustrating it is for players. It is distinct from the specific challenges faced during the initial hours, which are covered under a separate sub-theme.",
+        "example_codes": [
+          "challenging early game",
+          "frustrating early game",
+          "difficult game entry",
+          "clumsiness in early gameplay",
+          "difficult early game period"
+        ]
+      },
+      {
+        "id": "ON4",
+        "name": "Initial Experience and Engagement",
+        "definition": "This sub-theme focuses on the initial engagement and overall experience of starting the game, including both positive and negative evaluations. It is distinct from the specific challenges of the initial hours, which are addressed separately.",
+        "example_codes": [
+          "difficult initial experience",
+          "positive initial experience",
+          "challenging initial experience",
+          "confusing initial experience",
+          "quick assessment of enjoyability"
+        ]
+      },
+      {
+        "id": "ON5",
+        "name": "Pacing and Progression",
+        "definition": "This sub-theme addresses the speed and flow of the game's start, focusing on how quickly or slowly players progress and how this affects their initial experience. It is distinct from the specific challenges faced during the initial hours, which are covered under a separate sub-theme.",
+        "example_codes": [
+          "slow start",
+          "slow initial pacing",
+          "requires patience early on",
+          "slow and punishing start",
+          "slow start to gameplay"
+        ]
+      }
+    ],
+    "UI": [
+      {
+        "id": "UI1",
+        "name": "Interface Design",
+        "definition": "This sub-theme encompasses the overall aesthetic and functional design of the user interface, including its layout, usability, and visual appeal. It is distinct from specific elements like controls or feedback mechanisms, focusing instead on the general design quality and user experience.",
+        "example_codes": [
+          "poor interface design",
+          "poor user interface design",
+          "poorly designed interface",
+          "clumsy user interface",
+          "interface design reminiscent of old software"
+        ]
+      },
+      {
+        "id": "UI2",
+        "name": "UI Clarity and Navigation",
+        "definition": "This sub-theme encompasses the clarity of the user interface and the ease of navigating and interacting with game menus, inventory, and quest systems, focusing on the cognitive load and user experience in accessing and managing game information.",
+        "example_codes": [
+          "confusing item interactions",
+          "menu navigation instructions",
+          "missing menu explanations",
+          "difficulty viewing quests",
+          "excessive quest log entries",
+          "confusing quest log"
+        ],
+        "merged_from": [
+          "Interface Complexity",
+          "Navigation and Interaction"
+        ],
+        "merge_evidence": {
+          "pair": [
+            "UI2",
+            "UI5"
+          ],
+          "confusion": 0.164,
+          "similarity": 0.77
+        }
+      },
+      {
+        "id": "UI3",
+        "name": "Feedback and Information Display",
+        "definition": "This sub-theme covers the adequacy and clarity of feedback provided to the player through the interface, including hit markers, character stats, and other vital information. It is distinct from the complexity or design of the interface, focusing on the presence and visibility of necessary information.",
+        "example_codes": [
+          "inadequate hit markers",
+          "missing feedback on money received",
+          "lack of clear ui for character stats",
+          "missing vital numerical hud info",
+          "missing stamina display"
+        ]
+      },
+      {
+        "id": "UI4",
+        "name": "Control and Customization",
+        "definition": "This sub-theme involves the customization and responsiveness of controls, including keybindings and input methods. It is distinct from feedback and information display, focusing on how players interact with the game and customize their control schemes.",
+        "example_codes": [
+          "gamepad button input",
+          "confusing weapon mode switching",
+          "lack of keybind customization",
+          "limited keybind customization",
+          "using input to skip dialogue"
+        ]
+      }
+    ],
+    "AUDIOVISUAL": [
+      {
+        "id": "AU1",
+        "name": "World and Environment Visuals",
+        "definition": "This sub-theme encompasses the overall visual appeal and uniqueness of the game's world and environments, including the diversity and beauty of scenery, as well as any repetitive elements. It is distinct from general graphics quality and specific visual assets like character models.",
+        "example_codes": [
+          "beautiful world",
+          "visually appealing world",
+          "unique and beautiful scenery visuals",
+          "repetitive building models",
+          "beautiful and varied visuals/environments"
+        ]
+      },
+      {
+        "id": "AU2",
+        "name": "Graphics Quality",
+        "definition": "This sub-theme focuses on the technical quality and performance of the game's graphics, including resolution, texture quality, and overall visual fidelity. It is separate from the broader visual appeal of the world and specific animations.",
+        "example_codes": [
+          "beautiful graphics",
+          "average graphics",
+          "poor graphics quality",
+          "subpar graphics",
+          "acceptable graphics quality"
+        ]
+      },
+      {
+        "id": "AU3",
+        "name": "Visual and Animation Detail",
+        "definition": "This sub-theme addresses the intricacy and realism of visual details and animations, including texture quality, animation smoothness, and visual presentation. It is distinct from general graphics quality and the broader visual appeal of the game world.",
+        "example_codes": [
+          "poor visual quality",
+          "poor texture quality",
+          "poor animation quality",
+          "stiff animations",
+          "poor visual animations"
+        ]
+      },
+      {
+        "id": "AU4",
+        "name": "Sound and Music",
+        "definition": "This sub-theme covers the auditory aspects of the game, including the quality and impact of music, sound effects, and overall sound design. It is separate from the visual components of the game.",
+        "example_codes": [
+          "great ambient music",
+          "above average sound and music",
+          "poor sound design",
+          "good soundtrack fitting atmosphere",
+          "dull music atmosphere"
+        ]
+      },
+      {
+        "id": "AU5",
+        "name": "Atmosphere and Ambience",
+        "definition": "This sub-theme pertains to the overall mood and immersive quality created by the game's visuals and sound, including lighting, weather effects, and environmental design. It is distinct from specific visual or auditory elements.",
+        "example_codes": [
+          "strong atmosphere and ambience",
+          "immersive atmosphere",
+          "atmosphere of hostile world",
+          "poor ambient sound",
+          "atmosphere of the post-apocalyptic world"
+        ]
+      }
+    ],
+    "SYSTEM": [
+      {
+        "id": "SY1",
+        "name": "Bug Impact Spectrum",
+        "definition": "This sub-theme encompasses the range of bugs and glitches in the game, from minor visual issues that minimally affect gameplay to major disruptions that significantly hinder game progression or stability.",
+        "example_codes": [
+          "some bugs still present",
+          "frequent bugs",
+          "bugs present from start",
+          "numerous bugs",
+          "bugs and unfinished feeling",
+          "encountered multiple bugs"
+        ],
+        "merged_from": [
+          "Minor Bug Frequency",
+          "Major Bug Impact"
+        ],
+        "merge_evidence": {
+          "pair": [
+            "SY1",
+            "SY2"
+          ],
+          "confusion": 0.086,
+          "similarity": 0.933
+        }
+      },
+      {
+        "id": "SY2",
+        "name": "Crash and Stability",
+        "definition": "This sub-theme addresses the frequency and circumstances of game crashes, including crashes to desktop and during specific sequences. It is distinct from performance issues by focusing on complete game failures rather than frame rate or loading times, and does not include minor bugs or glitches.",
+        "example_codes": [
+          "frequent crashes to desktop",
+          "game crashes during loading",
+          "unexpected game shutdowns"
+        ]
+      },
+      {
+        "id": "SY3",
+        "name": "Technical Implementation",
+        "definition": "This sub-theme covers broader technical issues related to the game's programming and system requirements, including outdated technology and specific technical failures. It is distinct from bug frequency by focusing on systemic technical problems rather than individual bugs, and does not include minor or major bugs unless they are symptomatic of a larger technical issue.",
+        "example_codes": [
+          "outdated technology issues",
+          "system requirement mismatches",
+          "technical failures affecting gameplay"
+        ]
+      },
+      {
+        "id": "SY4",
+        "name": "Save File Integrity",
+        "definition": "This sub-theme pertains to issues related to saving and loading game progress, including save file malfunctions and limitations. It is distinct from other technical issues by focusing specifically on save-related problems and does not include general performance or stability issues.",
+        "example_codes": [
+          "save file corruption",
+          "issues with loading saves",
+          "limitations in save functionality"
+        ]
+      }
+    ],
+    "LIVE_DEVELOPMENT": [
+      {
+        "id": "LI1",
+        "name": "Developer Resource Allocation",
+        "definition": "This sub-theme captures the perceptions and evaluations related to the allocation of developer resources, including time, effort, and attention, towards the game's development and post-release support. It distinguishes itself from other sub-themes by focusing specifically on the resources available to developers rather than the outcomes of their efforts or community actions.",
+        "example_codes": [
+          "needs more developer resources",
+          "game needed more development time",
+          "development limited by resources",
+          "developer's unique approach"
+        ]
+      },
+      {
+        "id": "LI2",
+        "name": "Future Improvement Expectations",
+        "definition": "This sub-theme encompasses the anticipation and hope for future improvements, balancing, and fixes by the developers. It is distinct from immediate developer responsiveness or specific patch content, focusing instead on the broader expectation of ongoing game enhancement over time.",
+        "example_codes": [
+          "hope for future improvements",
+          "hope for future developer improvements",
+          "anticipation for future fixes",
+          "waiting for future development improvement"
+        ]
+      },
+      {
+        "id": "LI3",
+        "name": "Patch and Bug Fixing",
+        "definition": "This sub-theme addresses the actions taken by developers to fix bugs and release patches, including the community's response to these fixes. It is differentiated from general development support by its specific focus on addressing game issues through patches.",
+        "example_codes": [
+          "calling for developer fixes",
+          "developer needs to fix game issues",
+          "awaiting bug fixes",
+          "developer misleading about patch"
+        ]
+      },
+      {
+        "id": "LI4",
+        "name": "Update Frequency and Content",
+        "definition": "This sub-theme relates to the frequency and content of updates provided by the developers, including DLC and new features. It is distinct from patching and bug fixing by focusing on the broader scope of content updates and their timing.",
+        "example_codes": [
+          "lack of recent updates",
+          "anticipation for updates and price drops",
+          "desire for timely updates",
+          "need for future content updates"
+        ]
+      },
+      {
+        "id": "LI5",
+        "name": "Community and Mod Support",
+        "definition": "This sub-theme captures the role of community-driven mods and patches in enhancing the game experience, as well as the official support for such community efforts. It is distinct from developer-driven updates by focusing on the community's role in game improvement.",
+        "example_codes": [
+          "lack of mod support",
+          "community modding improving game",
+          "mods improve balance and enjoyment",
+          "mod support available"
+        ]
+      }
+    ]
+  },
+  "diagnostics": {
+    "STORYTELLING": [
+      {
+        "round": 0,
+        "subthemes": [
+          {
+            "id": "ST1",
+            "name": "Factions and Lore",
+            "definition": "This sub-theme encompasses the narrative elements related to the game's factions, including their ideologies, lore, and the player's choices regarding joining or interacting with them. It distinguishes itself from other sub-themes by focusing specifically on the narrative depth and complexity of faction-related content, rather than general world-building or character development.",
+            "example_codes": [
+              "multiple faction choices (4)",
+              "well-developed factions (3)",
+              "faction ideology (3)",
+              "distinctive factions and lore (3)",
+              "multiple distinct factions (2)"
+            ]
+          },
+          {
+            "id": "ST2",
+            "name": "Narrative Quality",
+            "definition": "This sub-theme addresses the overall quality of the game's writing, including dialogue, plot, and the ending. It is distinct from other sub-themes by focusing on the craftsmanship of the narrative elements themselves, rather than their integration into gameplay or world-building.",
+            "example_codes": [
+              "poor writing quality (5)",
+              "unsatisfying ending (3)",
+              "poor quality writing (2)",
+              "successful blend of series elements (2)"
+            ]
+          },
+          {
+            "id": "ST3",
+            "name": "Story Engagement",
+            "definition": "This sub-theme captures the player's engagement with the main and side stories, including the depth and consequence of the story, and the player's agency within it. It is distinct from other sub-themes by focusing on the player's emotional and intellectual engagement with the story, rather than the structural or thematic elements of the narrative.",
+            "example_codes": [
+              "engaging main story (2)",
+              "depth and consequence in story (2)",
+              "player agency in story (2)",
+              "praise for story elements (1)"
+            ]
+          },
+          {
+            "id": "ST4",
+            "name": "World Building",
+            "definition": "This sub-theme focuses on the creation and consistency of the game's fictional world, including its setting, atmosphere, and the integration of various elements into a cohesive universe. It is distinct from other sub-themes by concentrating on the spatial and environmental aspects of the narrative, rather than character or plot development.",
+            "example_codes": [
+              "inconsistent world building (5)",
+              "strong world building (4)",
+              "immersive world (3)",
+              "vast and immersive world (2)"
+            ]
+          },
+          {
+            "id": "ST5",
+            "name": "Character Development",
+            "definition": "This sub-theme pertains to the depth, complexity, and memorability of the game's characters, including their motivations, development, and the player's relationship with them. It is distinct from other sub-themes by focusing on the individual characters and their arcs, rather than the broader narrative or world-building elements.",
+            "example_codes": [
+              "interesting characters (6)",
+              "memorable characters (4)",
+              "complex character motivations (3)",
+              "unlikable main character (3)"
+            ]
+          }
+        ],
+        "kappa": 0.789,
+        "unassigned_%": 2.8,
+        "shares_%": {
+          "ST1": 14.1,
+          "ST2": 24.7,
+          "ST3": 20.9,
+          "ST4": 24.1,
+          "ST5": 13.4
+        },
+        "pair_confusion": {
+          "ST1|ST2": 0.0,
+          "ST1|ST3": 0.0,
+          "ST1|ST4": 0.062,
+          "ST1|ST5": 0.043,
+          "ST2|ST3": 0.13,
+          "ST2|ST4": 0.011,
+          "ST2|ST5": 0.014,
+          "ST3|ST4": 0.025,
+          "ST3|ST5": 0.0,
+          "ST4|ST5": 0.0
+        },
+        "failed_criteria": 0,
+        "problems": [],
+        "definition_similarity": {
+          "ST1|ST2": 0.83,
+          "ST1|ST3": 0.839,
+          "ST1|ST4": 0.846,
+          "ST1|ST5": 0.857,
+          "ST2|ST3": 0.858,
+          "ST2|ST4": 0.863,
+          "ST2|ST5": 0.86,
+          "ST3|ST4": 0.84,
+          "ST3|ST5": 0.87,
+          "ST4|ST5": 0.897
+        },
+        "merges": []
+      }
+    ],
+    "MECHANICS": [
+      {
+        "round": 0,
+        "subthemes": [
+          {
+            "id": "ME1",
+            "name": "Combat Mechanics",
+            "definition": "This sub-theme encompasses the player's interaction with the game's combat system, including the feel, controls, and variety of combat styles. It is distinct from the broader 'Combat System' sub-theme, which focuses on the overarching design and structure of combat mechanics.",
+            "example_codes": [
+              "poor combat mechanics",
+              "clunky combat mechanics",
+              "diverse combat styles",
+              "enjoyable combat",
+              "varied combat options",
+              "combat lacks depth"
+            ]
+          },
+          {
+            "id": "ME2",
+            "name": "Combat System",
+            "definition": "This sub-theme addresses the overall design and functionality of the combat system, including its depth, balance, and player satisfaction. It is separate from 'Combat Mechanics,' which focuses on the immediate feel and control aspects.",
+            "example_codes": [
+              "poor combat system",
+              "clunky combat system",
+              "frustrating combat system",
+              "enjoyable combat system",
+              "combat system needs improvement",
+              "stiff combat system"
+            ]
+          },
+          {
+            "id": "ME3",
+            "name": "Character Customization and Progression",
+            "definition": "This sub-theme covers the systems related to character development, including skill trees, attributes, and progression mechanics. It is distinct from 'Movement Mechanics,' which focuses on physical navigation and control.",
+            "example_codes": [
+              "lack of character customization",
+              "unbalanced skill tree",
+              "useless skill set",
+              "poor progression system",
+              "attribute system for leveling",
+              "deep skill system"
+            ]
+          },
+          {
+            "id": "ME4",
+            "name": "Movement and Traversal",
+            "definition": "This sub-theme involves the mechanics of character movement and navigation within the game world, including controls and hit detection. It is separate from 'Combat Mechanics' and 'Combat System,' which focus on combat interactions.",
+            "example_codes": [
+              "clunky gameplay",
+              "poor movement mechanics",
+              "awkward movement controls",
+              "clumsy gameplay mechanics",
+              "clunky movement mechanics",
+              "slow character movement"
+            ]
+          },
+          {
+            "id": "ME5",
+            "name": "Exploration and World Interaction",
+            "definition": "This sub-theme captures the player's experience with exploring the game world and interacting with its elements, including crafting and resource management. It is distinct from 'Combat Mechanics' and 'Combat System,' which focus on combat interactions.",
+            "example_codes": [
+              "crafting required for weapons",
+              "improved crafting system",
+              "build planning over raw stats",
+              "limited crafting opportunities",
+              "limited resource gathering",
+              "using found consumables for combat"
+            ]
+          }
+        ],
+        "kappa": 0.672,
+        "unassigned_%": 5.0,
+        "shares_%": {
+          "ME1": 33.1,
+          "ME2": 26.2,
+          "ME3": 12.5,
+          "ME4": 9.4,
+          "ME5": 13.8
+        },
+        "pair_confusion": {
+          "ME1|ME2": 0.126,
+          "ME1|ME3": 0.035,
+          "ME1|ME4": 0.051,
+          "ME1|ME5": 0.022,
+          "ME2|ME3": 0.042,
+          "ME2|ME4": 0.0,
+          "ME2|ME5": 0.0,
+          "ME3|ME4": 0.0,
+          "ME3|ME5": 0.0,
+          "ME4|ME5": 0.0
+        },
+        "failed_criteria": 1,
+        "problems": [
+          "Coders DISAGREE between ME1 \"Combat Mechanics\" and ME2 \"Combat System\" (13 codes), e.g.: ['limited weapon variety', 'weapon strength levels', 'steep learning curve for combat', 'specific weapon being most powerful', 'clunky combat system', 'combat abilities not used as expected', 'encourages avoiding combat', 'stamina limits combat actions']",
+          "Coders DISAGREE between ME1 \"Combat Mechanics\" and ME4 \"Movement and Traversal\" (4 codes), e.g.: ['buggy stamina system', 'limited stamina', 'cumbersome stamina management in combat', 'suggestion to use jumping instead of dodging']",
+          "Coders DISAGREE between ME2 \"Combat System\" and ME3 \"Character Customization and Progression\" (3 codes), e.g.: ['suggested weapon power level', 'progressive combat learning curve', 'poor rpg systems']"
+        ],
+        "definition_similarity": {
+          "ME1|ME2": 0.965,
+          "ME1|ME3": 0.85,
+          "ME1|ME4": 0.894,
+          "ME1|ME5": 0.889,
+          "ME2|ME3": 0.844,
+          "ME2|ME4": 0.885,
+          "ME2|ME5": 0.885,
+          "ME3|ME4": 0.895,
+          "ME3|ME5": 0.854,
+          "ME4|ME5": 0.896
+        },
+        "merges": [
+          {
+            "pair": [
+              "ME1",
+              "ME2"
+            ],
+            "confusion": 0.126,
+            "similarity": 0.965
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "subthemes": [
+          {
+            "id": "ME1",
+            "name": "Combat Dynamics",
+            "definition": "This sub-theme encompasses both the immediate interaction and overarching design of the game's combat system, including the feel, controls, variety, depth, balance, and player satisfaction.",
+            "example_codes": [
+              "limited weapon variety",
+              "weapon strength levels",
+              "steep learning curve for combat",
+              "specific weapon being most powerful",
+              "clunky combat system",
+              "combat abilities not used as expected"
+            ],
+            "merged_from": [
+              "Combat Mechanics",
+              "Combat System"
+            ],
+            "merge_evidence": {
+              "pair": [
+                "ME1",
+                "ME2"
+              ],
+              "confusion": 0.126,
+              "similarity": 0.965
+            }
+          },
+          {
+            "id": "ME2",
+            "name": "Character Customization and Progression",
+            "definition": "This sub-theme covers the systems related to character development, including skill trees, attributes, and progression mechanics. It is distinct from 'Movement Mechanics,' which focuses on physical navigation and control.",
+            "example_codes": [
+              "lack of character customization",
+              "unbalanced skill tree",
+              "useless skill set",
+              "poor progression system",
+              "attribute system for leveling",
+              "deep skill system"
+            ]
+          },
+          {
+            "id": "ME3",
+            "name": "Movement and Traversal",
+            "definition": "This sub-theme involves the mechanics of character movement and navigation within the game world, including controls and hit detection. It is separate from 'Combat Mechanics' and 'Combat System,' which focus on combat interactions.",
+            "example_codes": [
+              "clunky gameplay",
+              "poor movement mechanics",
+              "awkward movement controls",
+              "clumsy gameplay mechanics",
+              "clunky movement mechanics",
+              "slow character movement"
+            ]
+          },
+          {
+            "id": "ME4",
+            "name": "Exploration and World Interaction",
+            "definition": "This sub-theme captures the player's experience with exploring the game world and interacting with its elements, including crafting and resource management. It is distinct from 'Combat Mechanics' and 'Combat System,' which focus on combat interactions.",
+            "example_codes": [
+              "crafting required for weapons",
+              "improved crafting system",
+              "build planning over raw stats",
+              "limited crafting opportunities",
+              "limited resource gathering",
+              "using found consumables for combat"
+            ]
+          }
+        ],
+        "kappa": 0.695,
+        "unassigned_%": 2.8,
+        "shares_%": {
+          "ME1": 62.2,
+          "ME2": 13.8,
+          "ME3": 7.8,
+          "ME4": 13.4
+        },
+        "pair_confusion": {
+          "ME1|ME2": 0.062,
+          "ME1|ME3": 0.033,
+          "ME1|ME4": 0.038,
+          "ME2|ME3": 0.024,
+          "ME2|ME4": 0.019,
+          "ME3|ME4": 0.0
+        },
+        "failed_criteria": 1,
+        "problems": [
+          "Coders DISAGREE between ME1 \"Combat Dynamics\" and ME2 \"Character Customization and Progression\" (8 codes), e.g.: ['companions provide little help', 'companion utility questioned', 'suggested weapon power level', 'effective bleeding dot upgrade', 'combat became possible after growth', 'developers balance difficulty with character requirements', 'progressive combat learning curve', 'practice improves survival and access']",
+          "Coders DISAGREE between ME1 \"Combat Dynamics\" and ME4 \"Exploration and World Interaction\" (5 codes), e.g.: ['inventory management during combat', 'suggested non-combat approaches', 'avoiding combat', 'emphasis on danger', 'wildlife as genuine threat']",
+          "Coders DISAGREE between ME1 \"Combat Dynamics\" and ME3 \"Movement and Traversal\" (4 codes), e.g.: ['extreme hitboxes', 'lack of shooting while seated', 'using jetpack for ranged combat', 'jetpack for combat']"
+        ],
+        "definition_similarity": {
+          "ME1|ME2": 0.838,
+          "ME1|ME3": 0.878,
+          "ME1|ME4": 0.876,
+          "ME2|ME3": 0.895,
+          "ME2|ME4": 0.854,
+          "ME3|ME4": 0.896
+        },
+        "merges": []
+      },
+      {
+        "round": 2,
+        "subthemes": [
+          {
+            "id": "ME1",
+            "name": "Combat Dynamics",
+            "definition": "This sub-theme focuses on the immediate interaction and overarching design of the game's combat system, including the feel, controls, variety, depth, balance, and player satisfaction. It excludes character progression elements and world interaction mechanics.",
+            "example_codes": [
+              "combat became possible after growth",
+              "practice improves survival and access",
+              "combat learning curve"
+            ],
+            "merged_from": [
+              "Combat Mechanics",
+              "Combat System"
+            ],
+            "merge_evidence": {
+              "pair": [
+                "ME1",
+                "ME2"
+              ],
+              "confusion": 0.126,
+              "similarity": 0.965
+            }
+          },
+          {
+            "id": "ME2",
+            "name": "Character Progression",
+            "definition": "This sub-theme covers systems related to character development, including skill trees, attributes, and progression mechanics. It is distinct from combat dynamics and does not include movement or world interaction mechanics.",
+            "example_codes": [
+              "developers balance difficulty with character requirements",
+              "effective bleeding dot upgrade",
+              "suggested weapon power level"
+            ]
+          },
+          {
+            "id": "ME3",
+            "name": "Movement and Traversal",
+            "definition": "This sub-theme involves the mechanics of character movement and navigation within the game world, including controls and hit detection. It is separate from combat dynamics and world interaction mechanics.",
+            "example_codes": [
+              "extreme hitboxes",
+              "lack of shooting while seated",
+              "using jetpack for ranged combat"
+            ]
+          },
+          {
+            "id": "ME4",
+            "name": "Exploration and Interaction",
+            "definition": "This sub-theme captures the player's experience with exploring the game world and interacting with its elements, including crafting and resource management. It is distinct from combat dynamics and character progression mechanics.",
+            "example_codes": [
+              "inventory management during combat",
+              "suggested non-combat approaches",
+              "wildlife as genuine threat"
+            ]
+          },
+          {
+            "id": "ME5",
+            "name": "Companion Utility",
+            "definition": "This sub-theme focuses on the role and effectiveness of companions in the game, including their assistance in combat and exploration. It is distinct from character progression and movement mechanics.",
+            "example_codes": [
+              "companions provide little help",
+              "companion utility questioned"
+            ]
+          }
+        ],
+        "kappa": 0.629,
+        "unassigned_%": 6.6,
+        "shares_%": {
+          "ME1": 58.4,
+          "ME2": 12.5,
+          "ME3": 8.1,
+          "ME4": 12.5,
+          "ME5": 1.9
+        },
+        "pair_confusion": {
+          "ME1|ME2": 0.041,
+          "ME1|ME3": 0.08,
+          "ME1|ME4": 0.023,
+          "ME1|ME5": 0.0,
+          "ME2|ME3": 0.024,
+          "ME2|ME4": 0.0,
+          "ME2|ME5": 0.0,
+          "ME3|ME4": 0.0,
+          "ME3|ME5": 0.0,
+          "ME4|ME5": 0.0
+        },
+        "failed_criteria": 2,
+        "problems": [
+          "ME5 \"Companion Utility\" is TOO MARGINAL: it receives only 2% of the codes.",
+          "Coders DISAGREE between ME1 \"Combat Dynamics\" and ME3 \"Movement and Traversal\" (9 codes), e.g.: ['extreme hitboxes', 'easy evasion from enemies', 'sneaking as a viable strategy', 'mechanics of stamina-based combat', 'lack of shooting while seated', 'avoiding combat through evasion', 'using jetpack for ranged combat', 'suggestion to use jumping instead of dodging']",
+          "Coders DISAGREE between ME1 \"Combat Dynamics\" and ME2 \"Character Progression\" (5 codes), e.g.: ['combat became possible after growth', 'magic and psionics are unimpressive', 'developers balance difficulty with character requirements', 'progressive combat learning curve', 'practice improves survival and access']",
+          "Coders DISAGREE between ME1 \"Combat Dynamics\" and ME4 \"Exploration and Interaction\" (3 codes), e.g.: ['inventory management during combat', 'emphasis on danger', 'wildlife as genuine threat']"
+        ],
+        "definition_similarity": {
+          "ME1|ME2": 0.905,
+          "ME1|ME3": 0.893,
+          "ME1|ME4": 0.896,
+          "ME1|ME5": 0.779,
+          "ME2|ME3": 0.894,
+          "ME2|ME4": 0.884,
+          "ME2|ME5": 0.8,
+          "ME3|ME4": 0.895,
+          "ME3|ME5": 0.817,
+          "ME4|ME5": 0.827
+        },
+        "merges": []
+      },
+      {
+        "round": 3,
+        "subthemes": [
+          {
+            "id": "ME1",
+            "name": "Combat Dynamics",
+            "definition": "This sub-theme focuses on the immediate interaction and overarching design of the game's combat system, including the feel, controls, variety, depth, balance, and player satisfaction. It excludes character progression elements, movement mechanics, and world interaction mechanics.",
+            "example_codes": [
+              "extreme hitboxes",
+              "easy evasion from enemies",
+              "sneaking as a viable strategy",
+              "mechanics of stamina-based combat",
+              "lack of shooting while seated",
+              "avoiding combat through evasion"
+            ],
+            "merged_from": [
+              "Combat Mechanics",
+              "Combat System"
+            ],
+            "merge_evidence": {
+              "pair": [
+                "ME1",
+                "ME2"
+              ],
+              "confusion": 0.126,
+              "similarity": 0.965
+            }
+          },
+          {
+            "id": "ME2",
+            "name": "Movement and Evasion",
+            "definition": "This sub-theme involves the mechanics of character movement, navigation, and evasion within the game world, including controls, hit detection, and strategies for avoiding combat. It is distinct from combat dynamics and world interaction mechanics.",
+            "example_codes": [
+              "using jetpack for ranged combat",
+              "suggestion to use jumping instead of dodging",
+              "avoiding combat through evasion"
+            ]
+          },
+          {
+            "id": "ME3",
+            "name": "Character Progression",
+            "definition": "This sub-theme covers systems related to character development, including skill trees, attributes, and progression mechanics. It is distinct from combat dynamics, movement mechanics, and world interaction mechanics.",
+            "example_codes": [
+              "combat became possible after growth",
+              "magic and psionics are unimpressive",
+              "developers balance difficulty with character requirements",
+              "progressive combat learning curve",
+              "practice improves survival and access"
+            ]
+          },
+          {
+            "id": "ME4",
+            "name": "Exploration and Resource Management",
+            "definition": "This sub-theme captures the player's experience with exploring the game world and managing resources, including crafting and inventory management. It is distinct from combat dynamics, character progression, and movement mechanics.",
+            "example_codes": [
+              "inventory management during combat",
+              "emphasis on danger",
+              "wildlife as genuine threat"
+            ]
+          },
+          {
+            "id": "ME5",
+            "name": "Companion Interaction",
+            "definition": "This sub-theme focuses on the role and effectiveness of companions in the game, including their assistance in combat and exploration. It is distinct from character progression and movement mechanics.",
+            "example_codes": [
+              "companion assistance in combat",
+              "companion effectiveness in exploration",
+              "companion behavior during missions"
+            ]
+          }
+        ],
+        "kappa": 0.779,
+        "unassigned_%": 6.2,
+        "shares_%": {
+          "ME1": 55.0,
+          "ME2": 14.1,
+          "ME3": 12.2,
+          "ME4": 10.6,
+          "ME5": 1.9
+        },
+        "pair_confusion": {
+          "ME1|ME2": 0.052,
+          "ME1|ME3": 0.044,
+          "ME1|ME4": 0.026,
+          "ME1|ME5": 0.0,
+          "ME2|ME3": 0.021,
+          "ME2|ME4": 0.0,
+          "ME2|ME5": 0.0,
+          "ME3|ME4": 0.0,
+          "ME3|ME5": 0.0,
+          "ME4|ME5": 0.0
+        },
+        "failed_criteria": 1,
+        "problems": [
+          "ME5 \"Companion Interaction\" is TOO MARGINAL: it receives only 2% of the codes."
+        ],
+        "definition_similarity": {
+          "ME1|ME2": 0.895,
+          "ME1|ME3": 0.884,
+          "ME1|ME4": 0.838,
+          "ME1|ME5": 0.82,
+          "ME2|ME3": 0.845,
+          "ME2|ME4": 0.826,
+          "ME2|ME5": 0.821,
+          "ME3|ME4": 0.858,
+          "ME3|ME5": 0.819,
+          "ME4|ME5": 0.818
+        },
+        "merges": []
+      }
+    ],
+    "CHALLENGE": [
+      {
+        "round": 0,
+        "subthemes": [
+          {
+            "id": "CH1",
+            "name": "Early Game Difficulty",
+            "definition": "This sub-theme captures the initial challenge players face, focusing on the difficulty level and balance at the start of the game. It distinguishes itself from other sub-themes by specifically addressing the early stages of gameplay, where players often encounter steep learning curves and potentially unfair difficulty spikes.",
+            "example_codes": [
+              "challenging early game",
+              "extremely difficult early game",
+              "high initial difficulty",
+              "unfair difficulty early on",
+              "very difficult early on"
+            ]
+          },
+          {
+            "id": "CH2",
+            "name": "Enemy Strength and Balance",
+            "definition": "This sub-theme addresses the perceived power and balance of enemies throughout the game. It focuses on how enemy strength can impact player experience, distinguishing itself from other sub-themes by specifically examining the fairness and balance of enemy encounters, rather than the overall difficulty or combat mechanics.",
+            "example_codes": [
+              "enemies too strong early on",
+              "overpowered enemies",
+              "unfair enemy strength",
+              "enemies too strong for player",
+              "unbalanced enemy strength"
+            ]
+          },
+          {
+            "id": "CH3",
+            "name": "Difficulty Curve and Scaling",
+            "definition": "This sub-theme explores the progression and scaling of difficulty throughout the game. It is distinct from other sub-themes by focusing on how difficulty changes over time, including any spikes or inconsistencies, rather than the immediate challenge or enemy encounters.",
+            "example_codes": [
+              "difficulty curve",
+              "unfair difficulty curve",
+              "poor difficulty balance",
+              "unpredictable difficulty curve",
+              "inconsistent difficulty scaling"
+            ]
+          },
+          {
+            "id": "CH4",
+            "name": "Combat Challenge",
+            "definition": "This sub-theme examines the difficulty and balance of combat mechanics, specifically focusing on how challenging combat is for players. It is distinct from other sub-themes by concentrating on the mechanics and execution of combat, rather than the broader difficulty or enemy encounters.",
+            "example_codes": [
+              "challenging combat",
+              "difficult early combat",
+              "frustrating early combat",
+              "initial combat difficulty",
+              "unnecessarily difficult combat"
+            ]
+          },
+          {
+            "id": "CH5",
+            "name": "Overall Difficulty and Mastery",
+            "definition": "This sub-theme captures the general perception of the game's difficulty and the sense of mastery players achieve. It distinguishes itself by addressing the overall challenge and the rewarding nature of overcoming it, rather than specific aspects like early game difficulty or combat mechanics.",
+            "example_codes": [
+              "high difficulty level",
+              "difficulty causing frustration",
+              "ultimately rewarding",
+              "sense of mastery",
+              "challenging gameplay"
+            ]
+          }
+        ],
+        "kappa": 0.736,
+        "unassigned_%": 2.5,
+        "shares_%": {
+          "CH1": 30.3,
+          "CH2": 18.8,
+          "CH3": 15.9,
+          "CH4": 7.8,
+          "CH5": 24.7
+        },
+        "pair_confusion": {
+          "CH1|CH2": 0.011,
+          "CH1|CH3": 0.073,
+          "CH1|CH4": 0.056,
+          "CH1|CH5": 0.02,
+          "CH2|CH3": 0.032,
+          "CH2|CH4": 0.061,
+          "CH2|CH5": 0.0,
+          "CH3|CH4": 0.02,
+          "CH3|CH5": 0.054,
+          "CH4|CH5": 0.066
+        },
+        "failed_criteria": 0,
+        "problems": [],
+        "definition_similarity": {
+          "CH1|CH2": 0.837,
+          "CH1|CH3": 0.916,
+          "CH1|CH4": 0.851,
+          "CH1|CH5": 0.904,
+          "CH2|CH3": 0.853,
+          "CH2|CH4": 0.881,
+          "CH2|CH5": 0.849,
+          "CH3|CH4": 0.853,
+          "CH3|CH5": 0.887,
+          "CH4|CH5": 0.866
+        },
+        "merges": []
+      }
+    ],
+    "PROGRESSION_CONTENT": [
+      {
+        "round": 0,
+        "subthemes": [
+          {
+            "id": "PR1",
+            "name": "Quest Variety and Volume",
+            "definition": "This sub-theme encompasses the presence, diversity, and quantity of quests, including side quests, as a primary method for character leveling and progression. It distinguishes itself from other sub-themes by focusing specifically on the structure and availability of quests, rather than the broader content or progression mechanics.",
+            "example_codes": [
+              "abundance of quests",
+              "many side quests",
+              "quests as primary leveling method",
+              "lack of available quests",
+              "repetitive quest structure"
+            ]
+          },
+          {
+            "id": "PR2",
+            "name": "Content Abundance and Engagement",
+            "definition": "This sub-theme addresses the overall amount and quality of content available in the game, including how much content remains undiscovered and its engagement level. It is distinct from other sub-themes by focusing on the sheer volume and quality of content rather than the pacing or specific types of progression.",
+            "example_codes": [
+              "large amount of content",
+              "abundance of content",
+              "large amount of content remaining",
+              "abundant quality content",
+              "vast content compared to story progress"
+            ]
+          },
+          {
+            "id": "PR3",
+            "name": "Progression Pace and Reward",
+            "definition": "This sub-theme captures the speed and satisfaction derived from character progression, including how rewards are distributed over time. It is differentiated from other sub-themes by its focus on the temporal aspect of progression and the balance between effort and reward, rather than the content or specific mechanics.",
+            "example_codes": [
+              "slow progression",
+              "slow progression pace",
+              "slow but rewarding progression",
+              "lack of meaningful progression",
+              "rewarding progression"
+            ]
+          },
+          {
+            "id": "PR4",
+            "name": "Gameplay Duration and Engagement",
+            "definition": "This sub-theme focuses on the length of gameplay and the player's engagement throughout the game's duration. It is distinct from other sub-themes by emphasizing the temporal experience of playing the game, rather than the specific content, progression, or rewards.",
+            "example_codes": [
+              "long gameplay duration",
+              "significant playtime",
+              "engaging gameplay",
+              "engaging gameplay until the end",
+              "huge game longevity"
+            ]
+          },
+          {
+            "id": "PR5",
+            "name": "Character and Replayability Development",
+            "definition": "This sub-theme combines aspects of character growth over time with the game's replayability, highlighting how character progression and the game's design encourage multiple playthroughs. It stands apart from other sub-themes by linking character development directly with the game's replay value, rather than focusing solely on content volume or progression mechanics.",
+            "example_codes": [
+              "character growth over time",
+              "high replayability",
+              "character progression over time",
+              "satisfying character growth",
+              "high replay value and content"
+            ]
+          }
+        ],
+        "kappa": 0.66,
+        "unassigned_%": 6.9,
+        "shares_%": {
+          "PR1": 17.2,
+          "PR2": 24.7,
+          "PR3": 31.6,
+          "PR4": 10.6,
+          "PR5": 9.1
+        },
+        "pair_confusion": {
+          "PR1|PR2": 0.053,
+          "PR1|PR3": 0.022,
+          "PR1|PR4": 0.0,
+          "PR1|PR5": 0.0,
+          "PR2|PR3": 0.047,
+          "PR2|PR4": 0.015,
+          "PR2|PR5": 0.0,
+          "PR3|PR4": 0.037,
+          "PR3|PR5": 0.08,
+          "PR4|PR5": 0.0
+        },
+        "failed_criteria": 1,
+        "problems": [
+          "Coders DISAGREE between PR3 \"Progression Pace and Reward\" and PR5 \"Character and Replayability Development\" (6 codes), e.g.: ['redundant character progression', 'player character progression', 'gradual character growth', 'steady character improvement', 'slow and repetitive character growth', 'long-lasting equipment']",
+          "Coders DISAGREE between PR2 \"Content Abundance and Engagement\" and PR3 \"Progression Pace and Reward\" (5 codes), e.g.: ['exploration is fully rewarded', 'content available at higher levels', 'rewarded by good environment and quests', 'reward for world exploration', 'content pacing declines towards end']",
+          "Coders DISAGREE between PR1 \"Quest Variety and Volume\" and PR2 \"Content Abundance and Engagement\" (4 codes), e.g.: ['limited content beyond questing', 'content blocking player progress', 'large amount of leveling content', 'enjoyable exploration and quest completion']"
+        ],
+        "definition_similarity": {
+          "PR1|PR2": 0.849,
+          "PR1|PR3": 0.857,
+          "PR1|PR4": 0.795,
+          "PR1|PR5": 0.853,
+          "PR2|PR3": 0.825,
+          "PR2|PR4": 0.882,
+          "PR2|PR5": 0.845,
+          "PR3|PR4": 0.852,
+          "PR3|PR5": 0.888,
+          "PR4|PR5": 0.862
+        },
+        "merges": []
+      },
+      {
+        "round": 1,
+        "subthemes": [
+          {
+            "id": "PR1",
+            "name": "Quest Diversity and Quantity",
+            "definition": "This sub-theme focuses on the range and number of quests available, including side quests, as a means for character progression. It is distinct from other sub-themes by concentrating solely on the structure and availability of quests, without considering the broader content or progression mechanics.",
+            "example_codes": [
+              "limited content beyond questing",
+              "large amount of leveling content",
+              "enjoyable exploration and quest completion"
+            ]
+          },
+          {
+            "id": "PR2",
+            "name": "Content Volume and Quality",
+            "definition": "This sub-theme addresses the overall amount and quality of content available in the game, including undiscovered content and its engagement level. It is distinct from other sub-themes by focusing on the sheer volume and quality of content, rather than the pacing or specific types of progression.",
+            "example_codes": [
+              "content blocking player progress",
+              "content available at higher levels",
+              "rewarded by good environment and quests"
+            ]
+          },
+          {
+            "id": "PR3",
+            "name": "Progression Speed and Reward Balance",
+            "definition": "This sub-theme captures the speed of character progression and the balance between effort and reward. It is differentiated from other sub-themes by its focus on the temporal aspect of progression and the satisfaction derived from rewards, rather than the content or specific mechanics.",
+            "example_codes": [
+              "redundant character progression",
+              "gradual character growth",
+              "rewarded by good environment and quests",
+              "content pacing declines towards end"
+            ]
+          },
+          {
+            "id": "PR4",
+            "name": "Gameplay Duration and Engagement",
+            "definition": "This sub-theme focuses on the length of gameplay and the player's engagement throughout the game's duration. It is distinct from other sub-themes by emphasizing the temporal experience of playing the game, rather than the specific content, progression, or rewards.",
+            "example_codes": []
+          },
+          {
+            "id": "PR5",
+            "name": "Character Growth and Replayability",
+            "definition": "This sub-theme combines aspects of character growth over time with the game's replayability, highlighting how character progression and the game's design encourage multiple playthroughs. It stands apart from other sub-themes by linking character development directly with the game's replay value, rather than focusing solely on content volume or progression mechanics.",
+            "example_codes": [
+              "redundant character progression",
+              "player character progression",
+              "slow and repetitive character growth",
+              "long-lasting equipment"
+            ]
+          }
+        ],
+        "kappa": 0.683,
+        "unassigned_%": 6.6,
+        "shares_%": {
+          "PR1": 16.2,
+          "PR2": 26.2,
+          "PR3": 25.0,
+          "PR4": 11.9,
+          "PR5": 14.1
+        },
+        "pair_confusion": {
+          "PR1|PR2": 0.026,
+          "PR1|PR3": 0.026,
+          "PR1|PR4": 0.0,
+          "PR1|PR5": 0.018,
+          "PR2|PR3": 0.02,
+          "PR2|PR4": 0.074,
+          "PR2|PR5": 0.0,
+          "PR3|PR4": 0.0,
+          "PR3|PR5": 0.1,
+          "PR4|PR5": 0.02
+        },
+        "failed_criteria": 1,
+        "problems": [
+          "Coders DISAGREE between PR3 \"Progression Speed and Reward Balance\" and PR5 \"Character Growth and Replayability\" (7 codes), e.g.: ['lack of ability progression for gear', 'leveling up over time', 'reaching high character ranks', 'strong sense of progression', 'steady character improvement', 'slow and repetitive character growth', 'eventual completion of skill and stat progression']",
+          "Coders DISAGREE between PR2 \"Content Volume and Quality\" and PR4 \"Gameplay Duration and Engagement\" (5 codes), e.g.: ['repetitive and meaningless traversal', 'content pacing declines towards end', 'enjoyable exploration and quest completion', 'encourages continuous exploration', 'long-term content engagement']",
+          "Coders DISAGREE between PR1 \"Quest Diversity and Quantity\" and PR2 \"Content Volume and Quality\" (2 codes), e.g.: ['abundant side content', 'content blocking player progress']"
+        ],
+        "definition_similarity": {
+          "PR1|PR2": 0.844,
+          "PR1|PR3": 0.857,
+          "PR1|PR4": 0.799,
+          "PR1|PR5": 0.834,
+          "PR2|PR3": 0.827,
+          "PR2|PR4": 0.834,
+          "PR2|PR5": 0.835,
+          "PR3|PR4": 0.845,
+          "PR3|PR5": 0.883,
+          "PR4|PR5": 0.856
+        },
+        "merges": []
+      },
+      {
+        "round": 2,
+        "subthemes": [
+          {
+            "id": "PR1",
+            "name": "Quest Diversity and Quantity",
+            "definition": "This sub-theme focuses on the range and number of quests, including side quests, available for character progression. It is distinct from content volume by concentrating solely on the structure and availability of quests, without considering the overall content or progression mechanics.",
+            "example_codes": [
+              "abundant side content",
+              "quest variety",
+              "limited quest options"
+            ]
+          },
+          {
+            "id": "PR2",
+            "name": "Content Volume and Quality",
+            "definition": "This sub-theme addresses the overall amount and quality of content available in the game, including undiscovered content and its engagement level. It is distinct from gameplay duration by focusing on the sheer volume and quality of content, rather than the temporal experience of playing the game.",
+            "example_codes": [
+              "high-quality content",
+              "repetitive and meaningless traversal",
+              "engaging world exploration"
+            ]
+          },
+          {
+            "id": "PR3",
+            "name": "Progression Speed and Reward Balance",
+            "definition": "This sub-theme captures the speed of character progression and the balance between effort and reward. It is differentiated from character growth by focusing on the temporal aspect of progression and the satisfaction derived from rewards, rather than long-term character development.",
+            "example_codes": [
+              "lack of ability progression for gear",
+              "steady character improvement",
+              "slow and repetitive character growth"
+            ]
+          },
+          {
+            "id": "PR4",
+            "name": "Gameplay Duration and Engagement",
+            "definition": "This sub-theme focuses on the length of gameplay and the player's engagement throughout the game's duration. It is distinct from content volume by emphasizing the temporal experience of playing the game, rather than the specific content or progression mechanics.",
+            "example_codes": [
+              "content pacing declines towards end",
+              "encourages continuous exploration",
+              "long-term content engagement"
+            ]
+          },
+          {
+            "id": "PR5",
+            "name": "Character Growth and Replayability",
+            "definition": "This sub-theme combines aspects of character growth over time with the game's replayability, highlighting how character progression and the game's design encourage multiple playthroughs. It stands apart from progression speed by linking long-term character development directly with the game's replay value.",
+            "example_codes": [
+              "leveling up over time",
+              "reaching high character ranks",
+              "eventual completion of skill and stat progression"
+            ]
+          }
+        ],
+        "kappa": 0.705,
+        "unassigned_%": 5.9,
+        "shares_%": {
+          "PR1": 16.2,
+          "PR2": 27.5,
+          "PR3": 24.4,
+          "PR4": 11.9,
+          "PR5": 14.1
+        },
+        "pair_confusion": {
+          "PR1|PR2": 0.026,
+          "PR1|PR3": 0.039,
+          "PR1|PR4": 0.0,
+          "PR1|PR5": 0.0,
+          "PR2|PR3": 0.021,
+          "PR2|PR4": 0.043,
+          "PR2|PR5": 0.0,
+          "PR3|PR4": 0.029,
+          "PR3|PR5": 0.07,
+          "PR4|PR5": 0.042
+        },
+        "failed_criteria": 0,
+        "problems": [],
+        "definition_similarity": {
+          "PR1|PR2": 0.85,
+          "PR1|PR3": 0.824,
+          "PR1|PR4": 0.802,
+          "PR1|PR5": 0.803,
+          "PR2|PR3": 0.788,
+          "PR2|PR4": 0.901,
+          "PR2|PR5": 0.811,
+          "PR3|PR4": 0.812,
+          "PR3|PR5": 0.901,
+          "PR4|PR5": 0.841
+        },
+        "merges": []
+      }
+    ],
+    "ONBOARDING": [
+      {
+        "round": 0,
+        "subthemes": [
+          {
+            "id": "ON1",
+            "name": "Learning Curve",
+            "definition": "This sub-theme captures the difficulty and steepness of the initial learning process, focusing on how intuitive or challenging the game is for new players to understand its mechanics and rules. It is distinct from the general difficulty experienced after the player has learned the game, which falls under CHALLENGE.",
+            "example_codes": [
+              "steep learning curve",
+              "difficult initial learning curve",
+              "requires learning time, not intuitive",
+              "challenging initial learning curve",
+              "learning happens through progress"
+            ]
+          },
+          {
+            "id": "ON2",
+            "name": "Guidance and Direction",
+            "definition": "This sub-theme addresses the presence or absence of guidance and direction provided to players at the beginning of the game. It focuses on how well the game directs players on what to do or where to go, distinguishing it from the lack of information in menus, which is categorized under UI.",
+            "example_codes": [
+              "poor initial guidance",
+              "lack of early guidance",
+              "lack of initial direction",
+              "early guidance on safe travel",
+              "difficulty finding direction early on"
+            ]
+          },
+          {
+            "id": "ON3",
+            "name": "Initial Gameplay Experience",
+            "definition": "This sub-theme encompasses the overall experience of the early game, including its difficulty and how engaging or frustrating it is for players. It is distinct from the specific challenges faced during the initial hours, which are covered under a separate sub-theme.",
+            "example_codes": [
+              "challenging early game",
+              "frustrating early game",
+              "difficult game entry",
+              "clumsiness in early gameplay",
+              "difficult early game period"
+            ]
+          },
+          {
+            "id": "ON4",
+            "name": "Initial Experience and Engagement",
+            "definition": "This sub-theme focuses on the initial engagement and overall experience of starting the game, including both positive and negative evaluations. It is distinct from the specific challenges of the initial hours, which are addressed separately.",
+            "example_codes": [
+              "difficult initial experience",
+              "positive initial experience",
+              "challenging initial experience",
+              "confusing initial experience",
+              "quick assessment of enjoyability"
+            ]
+          },
+          {
+            "id": "ON5",
+            "name": "Pacing and Progression",
+            "definition": "This sub-theme addresses the speed and flow of the game's start, focusing on how quickly or slowly players progress and how this affects their initial experience. It is distinct from the specific challenges faced during the initial hours, which are covered under a separate sub-theme.",
+            "example_codes": [
+              "slow start",
+              "slow initial pacing",
+              "requires patience early on",
+              "slow and punishing start",
+              "slow start to gameplay"
+            ]
+          }
+        ],
+        "kappa": 0.759,
+        "unassigned_%": 1.9,
+        "shares_%": {
+          "ON1": 25.0,
+          "ON2": 32.5,
+          "ON3": 15.6,
+          "ON4": 15.3,
+          "ON5": 9.7
+        },
+        "pair_confusion": {
+          "ON1|ON2": 0.05,
+          "ON1|ON3": 0.04,
+          "ON1|ON4": 0.096,
+          "ON1|ON5": 0.016,
+          "ON2|ON3": 0.012,
+          "ON2|ON4": 0.011,
+          "ON2|ON5": 0.014,
+          "ON3|ON4": 0.069,
+          "ON3|ON5": 0.0,
+          "ON4|ON5": 0.021
+        },
+        "failed_criteria": 0,
+        "problems": [],
+        "definition_similarity": {
+          "ON1|ON2": 0.782,
+          "ON1|ON3": 0.881,
+          "ON1|ON4": 0.841,
+          "ON1|ON5": 0.862,
+          "ON2|ON3": 0.795,
+          "ON2|ON4": 0.793,
+          "ON2|ON5": 0.81,
+          "ON3|ON4": 0.908,
+          "ON3|ON5": 0.915,
+          "ON4|ON5": 0.863
+        },
+        "merges": []
+      }
+    ],
+    "UI": [
+      {
+        "round": 0,
+        "subthemes": [
+          {
+            "id": "UI1",
+            "name": "Interface Design",
+            "definition": "This sub-theme encompasses the overall aesthetic and functional design of the user interface, including its layout, usability, and visual appeal. It is distinct from specific elements like controls or feedback mechanisms, focusing instead on the general design quality and user experience.",
+            "example_codes": [
+              "poor interface design",
+              "poor user interface design",
+              "poorly designed interface",
+              "clumsy user interface",
+              "interface design reminiscent of old software"
+            ]
+          },
+          {
+            "id": "UI2",
+            "name": "Interface Complexity",
+            "definition": "This sub-theme addresses the complexity and clarity of the user interface, focusing on how information is presented and whether it is easily understandable. It is distinct from general design quality, concentrating specifically on the cognitive load and clarity of the interface.",
+            "example_codes": [
+              "complex user interface",
+              "confusing information in ui",
+              "unappealing user interface",
+              "simplified user interface",
+              "simple ui lacking filter options"
+            ]
+          },
+          {
+            "id": "UI3",
+            "name": "Feedback and Information Display",
+            "definition": "This sub-theme covers the adequacy and clarity of feedback provided to the player through the interface, including hit markers, character stats, and other vital information. It is distinct from the complexity or design of the interface, focusing on the presence and visibility of necessary information.",
+            "example_codes": [
+              "inadequate hit markers",
+              "missing feedback on money received",
+              "lack of clear ui for character stats",
+              "missing vital numerical hud info",
+              "missing stamina display"
+            ]
+          },
+          {
+            "id": "UI4",
+            "name": "Control and Customization",
+            "definition": "This sub-theme involves the customization and responsiveness of controls, including keybindings and input methods. It is distinct from feedback and information display, focusing on how players interact with the game and customize their control schemes.",
+            "example_codes": [
+              "gamepad button input",
+              "confusing weapon mode switching",
+              "lack of keybind customization",
+              "limited keybind customization",
+              "using input to skip dialogue"
+            ]
+          },
+          {
+            "id": "UI5",
+            "name": "Navigation and Interaction",
+            "definition": "This sub-theme pertains to the ease of navigating menus and interacting with inventory and quest systems. It is distinct from control customization, focusing on the user experience related to accessing and managing game information and items.",
+            "example_codes": [
+              "difficulty finding notes in inventory",
+              "interacting with inventory",
+              "missing loot notification on pickup",
+              "inventory usability issues",
+              "poor menu navigation"
+            ]
+          }
+        ],
+        "kappa": 0.745,
+        "unassigned_%": 7.5,
+        "shares_%": {
+          "UI1": 20.9,
+          "UI2": 7.8,
+          "UI3": 20.3,
+          "UI4": 18.1,
+          "UI5": 25.3
+        },
+        "pair_confusion": {
+          "UI1|UI2": 0.054,
+          "UI1|UI3": 0.0,
+          "UI1|UI4": 0.015,
+          "UI1|UI5": 0.071,
+          "UI2|UI3": 0.036,
+          "UI2|UI4": 0.0,
+          "UI2|UI5": 0.164,
+          "UI3|UI4": 0.0,
+          "UI3|UI5": 0.06,
+          "UI4|UI5": 0.0
+        },
+        "failed_criteria": 0,
+        "problems": [],
+        "definition_similarity": {
+          "UI1|UI2": 0.904,
+          "UI1|UI3": 0.806,
+          "UI1|UI4": 0.807,
+          "UI1|UI5": 0.805,
+          "UI2|UI3": 0.794,
+          "UI2|UI4": 0.751,
+          "UI2|UI5": 0.77,
+          "UI3|UI4": 0.855,
+          "UI3|UI5": 0.815,
+          "UI4|UI5": 0.87
+        },
+        "merges": [
+          {
+            "pair": [
+              "UI2",
+              "UI5"
+            ],
+            "confusion": 0.164,
+            "similarity": 0.77
+          }
+        ]
+      },
+      {
+        "round": 1,
+        "subthemes": [
+          {
+            "id": "UI1",
+            "name": "Interface Design",
+            "definition": "This sub-theme encompasses the overall aesthetic and functional design of the user interface, including its layout, usability, and visual appeal. It is distinct from specific elements like controls or feedback mechanisms, focusing instead on the general design quality and user experience.",
+            "example_codes": [
+              "poor interface design",
+              "poor user interface design",
+              "poorly designed interface",
+              "clumsy user interface",
+              "interface design reminiscent of old software"
+            ]
+          },
+          {
+            "id": "UI2",
+            "name": "UI Clarity and Navigation",
+            "definition": "This sub-theme encompasses the clarity of the user interface and the ease of navigating and interacting with game menus, inventory, and quest systems, focusing on the cognitive load and user experience in accessing and managing game information.",
+            "example_codes": [
+              "confusing item interactions",
+              "menu navigation instructions",
+              "missing menu explanations",
+              "difficulty viewing quests",
+              "excessive quest log entries",
+              "confusing quest log"
+            ],
+            "merged_from": [
+              "Interface Complexity",
+              "Navigation and Interaction"
+            ],
+            "merge_evidence": {
+              "pair": [
+                "UI2",
+                "UI5"
+              ],
+              "confusion": 0.164,
+              "similarity": 0.77
+            }
+          },
+          {
+            "id": "UI3",
+            "name": "Feedback and Information Display",
+            "definition": "This sub-theme covers the adequacy and clarity of feedback provided to the player through the interface, including hit markers, character stats, and other vital information. It is distinct from the complexity or design of the interface, focusing on the presence and visibility of necessary information.",
+            "example_codes": [
+              "inadequate hit markers",
+              "missing feedback on money received",
+              "lack of clear ui for character stats",
+              "missing vital numerical hud info",
+              "missing stamina display"
+            ]
+          },
+          {
+            "id": "UI4",
+            "name": "Control and Customization",
+            "definition": "This sub-theme involves the customization and responsiveness of controls, including keybindings and input methods. It is distinct from feedback and information display, focusing on how players interact with the game and customize their control schemes.",
+            "example_codes": [
+              "gamepad button input",
+              "confusing weapon mode switching",
+              "lack of keybind customization",
+              "limited keybind customization",
+              "using input to skip dialogue"
+            ]
+          }
+        ],
+        "kappa": 0.77,
+        "unassigned_%": 6.6,
+        "shares_%": {
+          "UI1": 24.4,
+          "UI2": 33.4,
+          "UI3": 18.1,
+          "UI4": 17.5
+        },
+        "pair_confusion": {
+          "UI1|UI2": 0.12,
+          "UI1|UI3": 0.025,
+          "UI1|UI4": 0.026,
+          "UI2|UI3": 0.056,
+          "UI2|UI4": 0.0,
+          "UI3|UI4": 0.0
+        },
+        "failed_criteria": 0,
+        "problems": [],
+        "definition_similarity": {
+          "UI1|UI2": 0.828,
+          "UI1|UI3": 0.806,
+          "UI1|UI4": 0.807,
+          "UI2|UI3": 0.828,
+          "UI2|UI4": 0.805,
+          "UI3|UI4": 0.855
+        },
+        "merges": []
+      }
+    ],
+    "AUDIOVISUAL": [
+      {
+        "round": 0,
+        "subthemes": [
+          {
+            "id": "AU1",
+            "name": "World and Environment Visuals",
+            "definition": "This sub-theme encompasses the overall visual appeal and uniqueness of the game's world and environments, including the diversity and beauty of scenery, as well as any repetitive elements. It is distinct from general graphics quality and specific visual assets like character models.",
+            "example_codes": [
+              "beautiful world",
+              "visually appealing world",
+              "unique and beautiful scenery visuals",
+              "repetitive building models",
+              "beautiful and varied visuals/environments"
+            ]
+          },
+          {
+            "id": "AU2",
+            "name": "Graphics Quality",
+            "definition": "This sub-theme focuses on the technical quality and performance of the game's graphics, including resolution, texture quality, and overall visual fidelity. It is separate from the broader visual appeal of the world and specific animations.",
+            "example_codes": [
+              "beautiful graphics",
+              "average graphics",
+              "poor graphics quality",
+              "subpar graphics",
+              "acceptable graphics quality"
+            ]
+          },
+          {
+            "id": "AU3",
+            "name": "Visual and Animation Detail",
+            "definition": "This sub-theme addresses the intricacy and realism of visual details and animations, including texture quality, animation smoothness, and visual presentation. It is distinct from general graphics quality and the broader visual appeal of the game world.",
+            "example_codes": [
+              "poor visual quality",
+              "poor texture quality",
+              "poor animation quality",
+              "stiff animations",
+              "poor visual animations"
+            ]
+          },
+          {
+            "id": "AU4",
+            "name": "Sound and Music",
+            "definition": "This sub-theme covers the auditory aspects of the game, including the quality and impact of music, sound effects, and overall sound design. It is separate from the visual components of the game.",
+            "example_codes": [
+              "great ambient music",
+              "above average sound and music",
+              "poor sound design",
+              "good soundtrack fitting atmosphere",
+              "dull music atmosphere"
+            ]
+          },
+          {
+            "id": "AU5",
+            "name": "Atmosphere and Ambience",
+            "definition": "This sub-theme pertains to the overall mood and immersive quality created by the game's visuals and sound, including lighting, weather effects, and environmental design. It is distinct from specific visual or auditory elements.",
+            "example_codes": [
+              "strong atmosphere and ambience",
+              "immersive atmosphere",
+              "atmosphere of hostile world",
+              "poor ambient sound",
+              "atmosphere of the post-apocalyptic world"
+            ]
+          }
+        ],
+        "kappa": 0.848,
+        "unassigned_%": 3.1,
+        "shares_%": {
+          "AU1": 21.6,
+          "AU2": 34.7,
+          "AU3": 12.8,
+          "AU4": 14.4,
+          "AU5": 13.4
+        },
+        "pair_confusion": {
+          "AU1|AU2": 0.063,
+          "AU1|AU3": 0.0,
+          "AU1|AU4": 0.0,
+          "AU1|AU5": 0.016,
+          "AU2|AU3": 0.025,
+          "AU2|AU4": 0.0,
+          "AU2|AU5": 0.012,
+          "AU3|AU4": 0.0,
+          "AU3|AU5": 0.022,
+          "AU4|AU5": 0.0
+        },
+        "failed_criteria": 0,
+        "problems": [],
+        "definition_similarity": {
+          "AU1|AU2": 0.882,
+          "AU1|AU3": 0.898,
+          "AU1|AU4": 0.831,
+          "AU1|AU5": 0.91,
+          "AU2|AU3": 0.921,
+          "AU2|AU4": 0.82,
+          "AU2|AU5": 0.825,
+          "AU3|AU4": 0.827,
+          "AU3|AU5": 0.845,
+          "AU4|AU5": 0.901
+        },
+        "merges": []
+      }
+    ],
+    "SYSTEM": [
+      {
+        "round": 0,
+        "subthemes": [
+          {
+            "id": "SY1",
+            "name": "Bug Frequency and Impact",
+            "definition": "This sub-theme encompasses the prevalence and severity of bugs and glitches, distinguishing between frequent, occasional, and minimal occurrences, as well as their impact on gameplay. It separates from technical issues by focusing on the presence and effect of bugs rather than underlying technical problems.",
+            "example_codes": [
+              "numerous bugs (6)",
+              "frequent bugs and glitches (2)",
+              "minimal bugs and crashes (1)",
+              "no severe bugs (1)"
+            ]
+          },
+          {
+            "id": "SY2",
+            "name": "Crash and Stability",
+            "definition": "This sub-theme addresses the frequency and circumstances of game crashes, including crashes to desktop and during specific sequences. It is distinct from performance issues by focusing on complete game failures rather than frame rate or loading times.",
+            "example_codes": [
+              "frequent crashes (4)",
+              "crashes during opening sequence (2)",
+              "no crashes or bugs observed (2)"
+            ]
+          },
+          {
+            "id": "SY3",
+            "name": "Technical Implementation",
+            "definition": "This sub-theme covers the broader technical issues related to the game's programming and system requirements, including outdated technology and specific technical failures. It is distinct from bug frequency by focusing on systemic technical problems rather than individual bugs.",
+            "example_codes": [
+              "poor technical implementation (4)",
+              "technical issues (2)",
+              "language setting failure (1)"
+            ]
+          },
+          {
+            "id": "SY4",
+            "name": "Performance and Optimization",
+            "definition": "This sub-theme focuses on the game's performance metrics, such as frame rate, loading times, and optimization, distinguishing between stable and unstable performance. It is separate from crashes by addressing ongoing performance rather than complete failures.",
+            "example_codes": [
+              "stable performance (5)",
+              "poor optimization (4)",
+              "stable 60fps performance on laptop (1)"
+            ]
+          },
+          {
+            "id": "SY5",
+            "name": "Save File Integrity",
+            "definition": "This sub-theme pertains to issues related to saving and loading game progress, including save file malfunctions and limitations. It is distinct from other technical issues by focusing specifically on save-related problems.",
+            "example_codes": [
+              "save file issues (5)",
+              "broken saves can be fixed with guide (2)",
+              "save limit causing game failure (1)"
+            ]
+          }
+        ],
+        "kappa": 0.772,
+        "unassigned_%": 5.3,
+        "shares_%": {
+          "SY1": 57.2,
+          "SY2": 9.7,
+          "SY3": 11.9,
+          "SY4": 11.6,
+          "SY5": 4.4
+        },
+        "pair_confusion": {
+          "SY1|SY2": 0.017,
+          "SY1|SY3": 0.043,
+          "SY1|SY4": 0.009,
+          "SY1|SY5": 0.0,
+          "SY2|SY3": 0.049,
+          "SY2|SY4": 0.0,
+          "SY2|SY5": 0.08,
+          "SY3|SY4": 0.0,
+          "SY3|SY5": 0.0,
+          "SY4|SY5": 0.0
+        },
+        "failed_criteria": 2,
+        "problems": [
+          "SY1 \"Bug Frequency and Impact\" is TOO BROAD: it receives 57% of the codes. Codes it contains: ['minor glitches', 'occasional bugs', 'minor bugs like misplaced items', 'numerous software bugs', 'numerous bugs present', 'visual glitch in opening cinematic', 'buggy and poorly designed', 'vertical sync bug', 'visible graphical bugs', 'frequent bugs and glitches', 'unable to open door despite correct code', 'combat system bugs', 'annoying but minor bugs', 'quest progression blocked by bugs', 'few bugs encountered']",
+          "SY5 \"Save File Integrity\" is TOO MARGINAL: it receives only 4% of the codes."
+        ],
+        "definition_similarity": {
+          "SY1|SY2": 0.835,
+          "SY1|SY3": 0.896,
+          "SY1|SY4": 0.796,
+          "SY1|SY5": 0.806,
+          "SY2|SY3": 0.836,
+          "SY2|SY4": 0.913,
+          "SY2|SY5": 0.822,
+          "SY3|SY4": 0.811,
+          "SY3|SY5": 0.813,
+          "SY4|SY5": 0.777
+        },
+        "merges": []
+      },
+      {
+        "round": 1,
+        "subthemes": [
+          {
+            "id": "SY1",
+            "name": "Minor Bug Frequency",
+            "definition": "This sub-theme focuses on the occurrence of minor bugs and glitches that do not significantly impact gameplay, such as visual glitches or minor item misplacements. It is distinct from major bugs by its minimal impact on the player's experience.",
+            "example_codes": [
+              "minor glitches",
+              "minor bugs like misplaced items",
+              "annoying but minor bugs"
+            ]
+          },
+          {
+            "id": "SY2",
+            "name": "Major Bug Impact",
+            "definition": "This sub-theme addresses bugs and glitches that significantly disrupt gameplay, such as blocking quest progression or affecting combat systems. It is distinct from minor bugs by the severity of its impact on the player's experience.",
+            "example_codes": [
+              "frequent bugs and glitches",
+              "quest progression blocked by bugs",
+              "combat system bugs"
+            ]
+          },
+          {
+            "id": "SY3",
+            "name": "Crash and Stability",
+            "definition": "This sub-theme addresses the frequency and circumstances of game crashes, including crashes to desktop and during specific sequences. It is distinct from performance issues by focusing on complete game failures rather than frame rate or loading times.",
+            "example_codes": [
+              "crashes to desktop",
+              "crashes during specific sequences",
+              "game failures"
+            ]
+          },
+          {
+            "id": "SY4",
+            "name": "Technical Implementation",
+            "definition": "This sub-theme covers broader technical issues related to the game's programming and system requirements, including outdated technology and specific technical failures. It is distinct from bug frequency by focusing on systemic technical problems rather than individual bugs.",
+            "example_codes": [
+              "outdated technology",
+              "specific technical failures",
+              "systemic technical problems"
+            ]
+          },
+          {
+            "id": "SY5",
+            "name": "Save File Integrity",
+            "definition": "This sub-theme pertains to issues related to saving and loading game progress, including save file malfunctions and limitations. It is distinct from other technical issues by focusing specifically on save-related problems.",
+            "example_codes": [
+              "save file malfunctions",
+              "save file limitations",
+              "issues with loading game progress"
+            ]
+          }
+        ],
+        "kappa": 0.694,
+        "unassigned_%": 22.5,
+        "shares_%": {
+          "SY1": 27.2,
+          "SY2": 22.2,
+          "SY3": 10.6,
+          "SY4": 12.5,
+          "SY5": 5.0
+        },
+        "pair_confusion": {
+          "SY1|SY2": 0.067,
+          "SY1|SY3": 0.042,
+          "SY1|SY4": 0.012,
+          "SY1|SY5": 0.0,
+          "SY2|SY3": 0.0,
+          "SY2|SY4": 0.046,
+          "SY2|SY5": 0.0,
+          "SY3|SY4": 0.044,
+          "SY3|SY5": 0.0,
+          "SY4|SY5": 0.0
+        },
+        "failed_criteria": 2,
+        "problems": [
+          "22% of the assignments found NO fitting sub-theme. Examples: ['limited modding support', 'stuttering combat experience', 'requires restarting to fix issues', 'bugs are engine characteristic', 'stable gameplay', 'uncertainty about bug fixes', 'unexpected loading freezes', 'needs gpu specific update', 'audio malfunction', 'vertical sync bug', 'no crashes experienced', 'audio/voice acting bugs', 'poor optimization', 'absence of bugs', 'fast loading and saving']",
+          "Coders DISAGREE between SY1 \"Minor Bug Frequency\" and SY2 \"Major Bug Impact\" (6 codes), e.g.: ['frequent bugs and glitches', 'some bugs still present', 'bugs and unfinished feeling', 'encountered multiple bugs', 'small bugs in combat', 'numerous software glitches']",
+          "Coders DISAGREE between SY2 \"Major Bug Impact\" and SY4 \"Technical Implementation\" (3 codes), e.g.: ['technical issues affect gameplay', 'numerous bugs and unfinished features', 'numerous bugs and optimization issues']",
+          "Coders DISAGREE between SY1 \"Minor Bug Frequency\" and SY3 \"Crash and Stability\" (3 codes), e.g.: ['graphics glitches and loading issues', 'graphical glitches and loading issues', 'minimal bugs and crashes']"
+        ],
+        "definition_similarity": {
+          "SY1|SY2": 0.92,
+          "SY1|SY3": 0.801,
+          "SY1|SY4": 0.857,
+          "SY1|SY5": 0.804,
+          "SY2|SY3": 0.795,
+          "SY2|SY4": 0.858,
+          "SY2|SY5": 0.816,
+          "SY3|SY4": 0.838,
+          "SY3|SY5": 0.822,
+          "SY4|SY5": 0.815
+        },
+        "merges": []
+      },
+      {
+        "round": 2,
+        "subthemes": [
+          {
+            "id": "SY1",
+            "name": "Minor Bug Frequency",
+            "definition": "This sub-theme focuses on the occurrence of minor bugs and glitches that minimally impact gameplay, such as visual glitches or minor item misplacements, without affecting game progression or stability. It is distinct from major bugs by its negligible impact on the player's experience and does not include any issues that cause crashes or significant gameplay disruption.",
+            "example_codes": [
+              "visual glitches",
+              "minor item misplacements",
+              "occasional texture pop-ins"
+            ]
+          },
+          {
+            "id": "SY2",
+            "name": "Major Bug Impact",
+            "definition": "This sub-theme addresses bugs and glitches that significantly disrupt gameplay, such as blocking quest progression or affecting combat systems. It is distinct from minor bugs by the severity of its impact on the player's experience and does not include issues that only cause minor visual or performance disturbances.",
+            "example_codes": [
+              "blocking quest progression",
+              "combat system failures",
+              "gameplay-breaking glitches"
+            ]
+          },
+          {
+            "id": "SY3",
+            "name": "Crash and Stability",
+            "definition": "This sub-theme addresses the frequency and circumstances of game crashes, including crashes to desktop and during specific sequences. It is distinct from performance issues by focusing on complete game failures rather than frame rate or loading times, and does not include minor bugs or glitches.",
+            "example_codes": [
+              "frequent crashes to desktop",
+              "game crashes during loading",
+              "unexpected game shutdowns"
+            ]
+          },
+          {
+            "id": "SY4",
+            "name": "Technical Implementation",
+            "definition": "This sub-theme covers broader technical issues related to the game's programming and system requirements, including outdated technology and specific technical failures. It is distinct from bug frequency by focusing on systemic technical problems rather than individual bugs, and does not include minor or major bugs unless they are symptomatic of a larger technical issue.",
+            "example_codes": [
+              "outdated technology issues",
+              "system requirement mismatches",
+              "technical failures affecting gameplay"
+            ]
+          },
+          {
+            "id": "SY5",
+            "name": "Save File Integrity",
+            "definition": "This sub-theme pertains to issues related to saving and loading game progress, including save file malfunctions and limitations. It is distinct from other technical issues by focusing specifically on save-related problems and does not include general performance or stability issues.",
+            "example_codes": [
+              "save file corruption",
+              "issues with loading saves",
+              "limitations in save functionality"
+            ]
+          }
+        ],
+        "kappa": 0.649,
+        "unassigned_%": 20.0,
+        "shares_%": {
+          "SY1": 25.6,
+          "SY2": 25.0,
+          "SY3": 11.6,
+          "SY4": 13.1,
+          "SY5": 4.7
+        },
+        "pair_confusion": {
+          "SY1|SY2": 0.086,
+          "SY1|SY3": 0.041,
+          "SY1|SY4": 0.012,
+          "SY1|SY5": 0.0,
+          "SY2|SY3": 0.0,
+          "SY2|SY4": 0.055,
+          "SY2|SY5": 0.0,
+          "SY3|SY4": 0.083,
+          "SY3|SY5": 0.033,
+          "SY4|SY5": 0.0
+        },
+        "failed_criteria": 3,
+        "problems": [
+          "SY5 \"Save File Integrity\" is TOO MARGINAL: it receives only 5% of the codes.",
+          "20% of the assignments found NO fitting sub-theme. Examples: ['limited modding support', 'stuttering combat experience', 'requires restarting to fix issues', 'bugs are engine characteristic', 'stable gameplay', 'uncertainty about bug fixes', 'audio malfunction', 'vertical sync bug', 'no crashes experienced', 'audio/voice acting bugs', 'poor optimization', 'absence of bugs', 'fast loading and saving', 'no major bugs encountered', 'issues possibly fixed']",
+          "Coders DISAGREE between SY1 \"Minor Bug Frequency\" and SY2 \"Major Bug Impact\" (8 codes), e.g.: ['some bugs still present', 'frequent bugs', 'bugs present from start', 'numerous bugs', 'bugs and unfinished feeling', 'encountered multiple bugs', 'small bugs in combat', 'numerous software glitches']",
+          "Coders DISAGREE between SY3 \"Crash and Stability\" and SY4 \"Technical Implementation\" (4 codes), e.g.: ['launch issues', 'unexpected loading freezes', 'abandoned due to technical issues', 'noticeable command lag time']",
+          "Coders DISAGREE between SY2 \"Major Bug Impact\" and SY4 \"Technical Implementation\" (4 codes), e.g.: ['numerous bugs and unfinished features', 'game has flaws', 'numerous bugs and optimization issues', 'numerous technical issues']"
+        ],
+        "definition_similarity": {
+          "SY1|SY2": 0.933,
+          "SY1|SY3": 0.848,
+          "SY1|SY4": 0.877,
+          "SY1|SY5": 0.82,
+          "SY2|SY3": 0.827,
+          "SY2|SY4": 0.873,
+          "SY2|SY5": 0.823,
+          "SY3|SY4": 0.847,
+          "SY3|SY5": 0.844,
+          "SY4|SY5": 0.826
+        },
+        "merges": [
+          {
+            "pair": [
+              "SY1",
+              "SY2"
+            ],
+            "confusion": 0.086,
+            "similarity": 0.933
+          }
+        ]
+      },
+      {
+        "round": 3,
+        "subthemes": [
+          {
+            "id": "SY1",
+            "name": "Bug Impact Spectrum",
+            "definition": "This sub-theme encompasses the range of bugs and glitches in the game, from minor visual issues that minimally affect gameplay to major disruptions that significantly hinder game progression or stability.",
+            "example_codes": [
+              "some bugs still present",
+              "frequent bugs",
+              "bugs present from start",
+              "numerous bugs",
+              "bugs and unfinished feeling",
+              "encountered multiple bugs"
+            ],
+            "merged_from": [
+              "Minor Bug Frequency",
+              "Major Bug Impact"
+            ],
+            "merge_evidence": {
+              "pair": [
+                "SY1",
+                "SY2"
+              ],
+              "confusion": 0.086,
+              "similarity": 0.933
+            }
+          },
+          {
+            "id": "SY2",
+            "name": "Crash and Stability",
+            "definition": "This sub-theme addresses the frequency and circumstances of game crashes, including crashes to desktop and during specific sequences. It is distinct from performance issues by focusing on complete game failures rather than frame rate or loading times, and does not include minor bugs or glitches.",
+            "example_codes": [
+              "frequent crashes to desktop",
+              "game crashes during loading",
+              "unexpected game shutdowns"
+            ]
+          },
+          {
+            "id": "SY3",
+            "name": "Technical Implementation",
+            "definition": "This sub-theme covers broader technical issues related to the game's programming and system requirements, including outdated technology and specific technical failures. It is distinct from bug frequency by focusing on systemic technical problems rather than individual bugs, and does not include minor or major bugs unless they are symptomatic of a larger technical issue.",
+            "example_codes": [
+              "outdated technology issues",
+              "system requirement mismatches",
+              "technical failures affecting gameplay"
+            ]
+          },
+          {
+            "id": "SY4",
+            "name": "Save File Integrity",
+            "definition": "This sub-theme pertains to issues related to saving and loading game progress, including save file malfunctions and limitations. It is distinct from other technical issues by focusing specifically on save-related problems and does not include general performance or stability issues.",
+            "example_codes": [
+              "save file corruption",
+              "issues with loading saves",
+              "limitations in save functionality"
+            ]
+          }
+        ],
+        "kappa": 0.779,
+        "unassigned_%": 16.2,
+        "shares_%": {
+          "SY1": 54.1,
+          "SY2": 10.3,
+          "SY3": 14.4,
+          "SY4": 5.0
+        },
+        "pair_confusion": {
+          "SY1|SY2": 0.0,
+          "SY1|SY3": 0.042,
+          "SY1|SY4": 0.0,
+          "SY2|SY3": 0.043,
+          "SY2|SY4": 0.0,
+          "SY3|SY4": 0.0
+        },
+        "failed_criteria": 1,
+        "problems": [
+          "16% of the assignments found NO fitting sub-theme. Examples: ['limited modding support', 'stuttering combat experience', 'requires restarting to fix issues', 'stable gameplay', 'uncertainty about bug fixes', 'audio malfunction', 'random one-shot deaths due to controls', 'no crashes experienced', 'audio/voice acting bugs', 'poor optimization', 'absence of bugs', 'fast loading and saving', 'no major bugs encountered', 'issues possibly fixed', 'no crashes or bugs observed']"
+        ],
+        "definition_similarity": {
+          "SY1|SY2": 0.833,
+          "SY1|SY3": 0.865,
+          "SY1|SY4": 0.814,
+          "SY2|SY3": 0.847,
+          "SY2|SY4": 0.844,
+          "SY3|SY4": 0.826
+        },
+        "merges": []
+      }
+    ],
+    "LIVE_DEVELOPMENT": [
+      {
+        "round": 0,
+        "subthemes": [
+          {
+            "id": "LI1",
+            "name": "Developer Resource Allocation",
+            "definition": "This sub-theme captures the perceptions and evaluations related to the allocation of developer resources, including time, effort, and attention, towards the game's development and post-release support. It distinguishes itself from other sub-themes by focusing specifically on the resources available to developers rather than the outcomes of their efforts or community actions.",
+            "example_codes": [
+              "needs more developer resources",
+              "game needed more development time",
+              "development limited by resources",
+              "developer's unique approach"
+            ]
+          },
+          {
+            "id": "LI2",
+            "name": "Future Improvement Expectations",
+            "definition": "This sub-theme encompasses the anticipation and hope for future improvements, balancing, and fixes by the developers. It is distinct from immediate developer responsiveness or specific patch content, focusing instead on the broader expectation of ongoing game enhancement over time.",
+            "example_codes": [
+              "hope for future improvements",
+              "hope for future developer improvements",
+              "anticipation for future fixes",
+              "waiting for future development improvement"
+            ]
+          },
+          {
+            "id": "LI3",
+            "name": "Patch and Bug Fixing",
+            "definition": "This sub-theme addresses the actions taken by developers to fix bugs and release patches, including the community's response to these fixes. It is differentiated from general development support by its specific focus on addressing game issues through patches.",
+            "example_codes": [
+              "calling for developer fixes",
+              "developer needs to fix game issues",
+              "awaiting bug fixes",
+              "developer misleading about patch"
+            ]
+          },
+          {
+            "id": "LI4",
+            "name": "Update Frequency and Content",
+            "definition": "This sub-theme relates to the frequency and content of updates provided by the developers, including DLC and new features. It is distinct from patching and bug fixing by focusing on the broader scope of content updates and their timing.",
+            "example_codes": [
+              "lack of recent updates",
+              "anticipation for updates and price drops",
+              "desire for timely updates",
+              "need for future content updates"
+            ]
+          },
+          {
+            "id": "LI5",
+            "name": "Community and Mod Support",
+            "definition": "This sub-theme captures the role of community-driven mods and patches in enhancing the game experience, as well as the official support for such community efforts. It is distinct from developer-driven updates by focusing on the community's role in game improvement.",
+            "example_codes": [
+              "lack of mod support",
+              "community modding improving game",
+              "mods improve balance and enjoyment",
+              "mod support available"
+            ]
+          }
+        ],
+        "kappa": 0.706,
+        "unassigned_%": 7.0,
+        "shares_%": {
+          "LI1": 19.3,
+          "LI2": 25.0,
+          "LI3": 21.7,
+          "LI4": 14.3,
+          "LI5": 12.7
+        },
+        "pair_confusion": {
+          "LI1|LI2": 0.063,
+          "LI1|LI3": 0.042,
+          "LI1|LI4": 0.032,
+          "LI1|LI5": 0.0,
+          "LI2|LI3": 0.051,
+          "LI2|LI4": 0.074,
+          "LI2|LI5": 0.0,
+          "LI3|LI4": 0.0,
+          "LI3|LI5": 0.018,
+          "LI4|LI5": 0.022
+        },
+        "failed_criteria": 0,
+        "problems": [],
+        "definition_similarity": {
+          "LI1|LI2": 0.78,
+          "LI1|LI3": 0.81,
+          "LI1|LI4": 0.778,
+          "LI1|LI5": 0.789,
+          "LI2|LI3": 0.825,
+          "LI2|LI4": 0.829,
+          "LI2|LI5": 0.776,
+          "LI3|LI4": 0.846,
+          "LI3|LI5": 0.861,
+          "LI4|LI5": 0.802
+        },
+        "merges": []
+      }
+    ]
+  }
+}

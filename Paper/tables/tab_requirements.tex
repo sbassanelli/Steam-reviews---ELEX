@@ -1,0 +1,35 @@
+\begin{table*}[ht]
+  \centering
+  \small
+  \caption{What is needed to run the pipeline. Hardware is what we used, not a tested minimum.}
+  \label{tab:requirements}
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  \setlength{\aboverulesep}{0pt}
+  \setlength{\belowrulesep}{0pt}
+  \setlength{\dashlinedash}{2pt}
+  \setlength{\dashlinegap}{2pt}
+  \begin{adjustbox}{max width=\linewidth, max totalheight=0.85\textheight}
+  \begin{tabular}{l >{\raggedright\arraybackslash}p{0.5\textwidth}}
+    \toprule
+    \rowcolor{prHead}
+    \textbf{Requirement} & \textbf{Use case} \\
+    \arrayrulecolor{black}\midrule
+    \prgroup{2}{prMint}{prMintIcon}{\faLaptop}{Machine}{} \\
+    Computer & Apple M5 Pro, 18 CPU and 20 GPU cores, 24 GB of memory \\
+    Disk & 28 GB for the four models, under 150 MB for one study \\
+    Network & Only to collect reviews and download the models \\
+    \arrayrulecolor{prRule}\hdashline
+    \prgroup{2}{prPosBand}{prPosIcon}{\faCode}{Software}{} \\
+    Runtime & Ollama, Python 3.9 or later; a LaTeX engine (e.g. tectonic) for the PDF of the brief \\
+    Models & Gemma~4 (8B), Qwen~2.5 (14B), Phi-4 (14B), \texttt{nomic-embed-text} \\
+    Cost & No API fees; reviews never leave the machine \\
+    \arrayrulecolor{prRule}\hdashline
+    \prgroup{2}{prPeach}{prPeachIcon}{\faUsers}{People}{} \\
+    Skills & Running scripts from a terminal, editing one JSON file \\
+    Knowledge & A designer who knows the game, to read the priorities \\
+    Languages & None required to run it; extracts are kept in the original language \\
+    \arrayrulecolor{black}\bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table*}

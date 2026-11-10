@@ -1,0 +1,7 @@
+n,priorities_found_mean,priorities_found_p5,same_group_mean,new_priorities_mean,distinct_codes,reviews_with_extracts,encoding_min,harmonization_min,assignment_min,codebook_min,order check_min,brief_min,analysis_min,total_hours
+300,1.1,0,1.1,0.1,1437,250,109,75,19,45,12,2,2,4.4
+400,1.8,0,1.8,0.1,1897,334,145,100,26,45,12,2,2,5.5
+500,3.3,0,3.3,0.2,2339,417,182,125,32,45,12,2,2,6.7
+600,4.7,1,4.7,0.3,2821,502,218,150,38,45,12,2,2,7.8
+800,7.5,5,7.5,0.3,3698,669,291,200,50,45,12,2,2,10.0
+1200,14.0,14,14.0,0.0,5459,1004,436,300,74,45,12,2,2,14.5

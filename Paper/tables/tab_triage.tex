@@ -1,0 +1,42 @@
+\begin{table*}[ht]
+  \centering
+  \footnotesize
+  \caption{Design triage: the 14 of 43 sub-themes that call for a decision. Reviews mentioning the sub-theme, negative and positive extracts (\%), odds ratio of recommending the game for reviews that mention it (95\% CI, unadjusted), and share of reviews with at least one negative extract on the sub-theme that still recommend the game (\%; 70\% of all reviews do). Odds ratios: \colorbox{prNeg}{lower} or \colorbox{prPos}{higher} odds of recommending. Critics: \colorbox{prNeg}{below 50\%} or \colorbox{prPos}{70\% or more}. $^{*}p<.05$, $^{**}p<.01$, $^{***}p<.001$, Benjamini--Hochberg over the 43 sub-themes.}
+  \label{tab:triage}
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  \setlength{\aboverulesep}{0pt}
+  \setlength{\belowrulesep}{0pt}
+  \setlength{\dashlinedash}{2pt}
+  \setlength{\dashlinegap}{2pt}
+  \begin{adjustbox}{max width=\linewidth, max totalheight=0.85\textheight}
+  \begin{tabular}{l l r r r c r}
+    \toprule
+    \rowcolor{prHead}
+    \textbf{Sub-theme} & \textbf{Theme} & \textbf{Rev.} & \textbf{Neg.\ \%} & \textbf{Pos.\ \%} & \textbf{OR [95\% CI]} & \textbf{Critics rec.\ \%} \\
+    \arrayrulecolor{black}\midrule
+    \prgroup{7}{prNegBand}{prNegIcon}{\faWrench}{Repair first}{criticized, and goes with not recommending} \\
+    Combat Dynamics & \textsc{Mechanics} & 536 & 67.8 & 21.3 & \cellcolor{prNeg}\textbf{0.62 [0.48, 0.79]$^{**}$} & 53.0 \\
+    Movement and Evasion & \textsc{Mechanics} & 163 & 48.9 & 37.2 & \cellcolor{prNeg}\textbf{0.56 [0.40, 0.79]$^{**}$} & \cellcolor{prNeg}\textbf{33.0} \\
+    Enemy Strength and Balance & \textsc{Challenge} & 132 & 88.8 & 5.9 & \cellcolor{prNeg}\textbf{0.47 [0.32, 0.68]$^{***}$} & 50.4 \\
+    Performance and Technical Implementation & \textsc{System} & 55 & 68.9 & 29.5 & \cellcolor{prNeg}\textbf{0.50 [0.29, 0.85]$^{*}$} & \cellcolor{prNeg}\textbf{39.5} \\
+    Control and Customization & \textsc{UI} & 39 & 90.5 & 4.8 & \cellcolor{prNeg}\textbf{0.29 [0.15, 0.55]$^{**}$} & \cellcolor{prNeg}\textbf{34.3} \\
+    Crash and Stability & \textsc{System} & 36 & 75.0 & 20.0 & \cellcolor{prNeg}\textbf{0.42 [0.22, 0.80]$^{*}$} & \cellcolor{prNeg}\textbf{34.6} \\
+    \arrayrulecolor{prRule}\hdashline
+    \prgroup{7}{prAccBand}{prAccIcon}{\faBalanceScale}{Accepted friction}{criticized, yet goes with recommending} \\
+    Early Game Difficulty & \textsc{Challenge} & 177 & 94.1 & 3.4 & \cellcolor{prPos}\textbf{1.60 [1.10, 2.34]$^{*}$} & \cellcolor{prPos}\textbf{76.6} \\
+    Overall Difficulty and Mastery & \textsc{Challenge} & 165 & 54.6 & 31.7 & \cellcolor{prPos}\textbf{1.68 [1.14, 2.50]$^{*}$} & 67.4 \\
+    \arrayrulecolor{prRule}\hdashline
+    \prgroup{7}{prPosBand}{prPosIcon}{\faHeart}{Protect}{praised, and goes with recommending} \\
+    Story Engagement & \textsc{Storytelling} & 250 & 20.7 & 72.4 & \cellcolor{prPos}\textbf{2.17 [1.54, 3.07]$^{***}$} & 53.7 \\
+    World Building & \textsc{Storytelling} & 162 & 15.4 & 69.8 & \cellcolor{prPos}\textbf{1.78 [1.19, 2.66]$^{*}$} & \cellcolor{prNeg}\textbf{48.1} \\
+    Factions and Lore & \textsc{Storytelling} & 144 & 21.9 & 49.8 & \cellcolor{prPos}\textbf{1.88 [1.22, 2.88]$^{*}$} & 61.8 \\
+    Exploration and Resource Management & \textsc{Mechanics} & 140 & 29.7 & 48.5 & \cellcolor{prPos}\textbf{2.62 [1.62, 4.21]$^{***}$} & 68.1 \\
+    Character Growth and Replayability & \textsc{Progression and content} & 85 & 9.6 & 85.1 & \cellcolor{prPos}\textbf{5.69 [2.53, 12.79]$^{***}$} & 50.0 \\
+    Gameplay Duration and Engagement & \textsc{Progression and content} & 69 & 27.4 & 61.6 & \cellcolor{prPos}\textbf{2.27 [1.19, 4.33]$^{*}$} & 57.9 \\
+    \arrayrulecolor{prRule}\hdashline
+    \prgroup{7}{prGrey}{prIcon}{\faMinusCircle}{Not decisive}{29 further sub-themes with no significant association (Appendix~\ref{sec:appendix})} \\
+    \arrayrulecolor{black}\bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table*}

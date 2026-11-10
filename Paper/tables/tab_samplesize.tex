@@ -1,0 +1,27 @@
+\begin{table*}[ht]
+  \centering
+  \small
+  \caption{Cost and yield of smaller samples, estimated by drawing 200 random subsamples of each size from the 1,200 coded reviews. Machine time from the rates measured in the use case, without the filter (which depends on the corpus). Priorities: sub-themes in a triage group other than not decisive, compared with the 14 found with 1,200 reviews (mean and 5th percentile over the draws); new: priorities not among the 14. \colorbox{prNeg}{Coral}: fewer than half of the 14 found.}
+  \label{tab:samplesize}
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  \setlength{\aboverulesep}{0pt}
+  \setlength{\belowrulesep}{0pt}
+  \setlength{\dashlinedash}{2pt}
+  \setlength{\dashlinegap}{2pt}
+  \begin{adjustbox}{max width=\linewidth, max totalheight=0.85\textheight}
+  \begin{tabular}{r r r r c r r}
+    \toprule
+    \rowcolor{prHead}
+    \textbf{Reviews} & \textbf{Hours} & \textbf{Distinct codes} & \textbf{With extracts} & \textbf{Priorities found} & \textbf{5th pct.} & \textbf{New} \\
+    \arrayrulecolor{black}\midrule
+    300 & 4.4 & 1{,}437 & 250 & \cellcolor{prNeg}\textbf{1.1} & 0 & 0.1 \\
+    400 & 5.5 & 1{,}897 & 334 & \cellcolor{prNeg}\textbf{1.8} & 0 & 0.1 \\
+    500 & 6.7 & 2{,}339 & 417 & \cellcolor{prNeg}\textbf{3.3} & 0 & 0.2 \\
+    600 & 7.8 & 2{,}821 & 502 & \cellcolor{prNeg}\textbf{4.7} & 1 & 0.3 \\
+    800 & 10.0 & 3{,}698 & 669 & 7.5 & 5 & 0.3 \\
+    1{,}200 & 14.5 & 5{,}459 & 1{,}004 & \cellcolor{prPos}\textbf{14} & -- & 0.0 \\
+    \arrayrulecolor{black}\bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table*}

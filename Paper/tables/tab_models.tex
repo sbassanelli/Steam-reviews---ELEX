@@ -1,0 +1,30 @@
+\begin{table*}[ht]
+  \centering
+  \small
+  \caption{Models at review level ($N=1{,}200$). Odds ratios of recommending the game for at least one positive or negative extract on the theme (logit with log hours and language, HC1 errors); the third column repeats the negative term using only extracts proposed by both encoders. Last column: difference in total playtime (\%) for reviews that mention the theme (OLS on log hours with recommendation and language, HC3 errors). In brackets, 95\% CIs. Significant results: \colorbox{prNeg}{lower} or \colorbox{prPos}{higher}. -- = term left out (perfect separation). $^{*}p<.05$, $^{**}p<.01$, $^{***}p<.001$, Benjamini--Hochberg within each family.}
+  \label{tab:models}
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  \setlength{\aboverulesep}{0pt}
+  \setlength{\belowrulesep}{0pt}
+  \setlength{\dashlinedash}{2pt}
+  \setlength{\dashlinegap}{2pt}
+  \begin{adjustbox}{max width=\linewidth, max totalheight=0.85\textheight}
+  \begin{tabular}{l c c c c}
+    \toprule
+    \rowcolor{prHead}
+    \textbf{Theme} & \textbf{Praised} & \textbf{Criticized} & \textbf{Criticized (both encoders)} & \textbf{Playtime, \%} \\
+    \arrayrulecolor{black}\midrule
+    \textcolor{prIcon}{\faBook}\hspace{0.5em}\textsc{Storytelling} & \cellcolor{prPos}\textbf{5.68 [3.35, 9.61]$^{***}$} & \cellcolor{prNeg}\textbf{0.23 [0.13, 0.41]$^{***}$} & \cellcolor{prNeg}\textbf{0.40 [0.23, 0.70]$^{**}$} & 8 [-6, 24] \\
+    \textcolor{prIcon}{\faCogs}\hspace{0.5em}\textsc{Mechanics} & \cellcolor{prPos}\textbf{4.09 [2.22, 7.52]$^{***}$} & \cellcolor{prNeg}\textbf{0.22 [0.14, 0.33]$^{***}$} & \cellcolor{prNeg}\textbf{0.22 [0.15, 0.33]$^{***}$} & 8 [-6, 24] \\
+    \textcolor{prIcon}{\faMountain}\hspace{0.5em}\textsc{Challenge} & \cellcolor{prPos}\textbf{7.05 [1.79, 27.76]$^{*}$} & \cellcolor{prNeg}\textbf{0.56 [0.36, 0.86]$^{*}$} & \cellcolor{prNeg}\textbf{0.42 [0.27, 0.66]$^{***}$} & \cellcolor{prPos}\textbf{32 [16, 50]$^{***}$} \\
+    \textcolor{prIcon}{\faChartLine}\hspace{0.5em}\textsc{Progression and content} & \cellcolor{prPos}\textbf{5.71 [2.56, 12.74]$^{***}$} & \cellcolor{prNeg}\textbf{0.23 [0.13, 0.41]$^{***}$} & \cellcolor{prNeg}\textbf{0.21 [0.11, 0.40]$^{***}$} & \cellcolor{prPos}\textbf{64 [44, 88]$^{***}$} \\
+    \textcolor{prIcon}{\faMapSigns}\hspace{0.5em}\textsc{Onboarding} & 0.81 [0.22, 3.00] & 0.91 [0.51, 1.60] & 1.01 [0.50, 2.02] & -8 [-21, 7] \\
+    \textcolor{prIcon}{\faDesktop}\hspace{0.5em}\textsc{UI} & -- & 0.57 [0.28, 1.17] & 0.70 [0.32, 1.53] & -6 [-25, 19] \\
+    \textcolor{prIcon}{\faMusic}\hspace{0.5em}\textsc{Audiovisual} & 1.94 [0.99, 3.78] & 0.76 [0.42, 1.36] & 0.63 [0.36, 1.09] & \cellcolor{prNeg}\textbf{-21 [-31, -9]$^{**}$} \\
+    \textcolor{prIcon}{\faBug}\hspace{0.5em}\textsc{System} & 1.43 [0.30, 6.77] & \cellcolor{prNeg}\textbf{0.41 [0.23, 0.73]$^{**}$} & \cellcolor{prNeg}\textbf{0.35 [0.18, 0.68]$^{**}$} & 10 [-8, 32] \\
+    \textcolor{prIcon}{\faTools}\hspace{0.5em}\textsc{Live development} & \cellcolor{prPos}\textbf{11.17 [1.61, 77.47]$^{*}$} & 0.78 [0.25, 2.40] & 0.53 [0.15, 1.87] & -14 [-32, 9] \\
+    \arrayrulecolor{black}\bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table*}

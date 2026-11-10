@@ -1,0 +1,240 @@
+[
+ {
+  "subtheme": "Combat Dynamics",
+  "group": "Repair first",
+  "n_extracts": 40,
+  "seconds": 11.9,
+  "error": null,
+  "requirement": "The game must refine combat mechanics to ensure responsive and fluid interactions, reducing clunkiness and improving player satisfaction.",
+  "proposed_change": "Enhance the responsiveness of combat actions, such as dodging and blocking, to ensure they feel intuitive and effective. Adjust enemy AI to provide a balanced challenge without feeling like 'bullet sponges'.",
+  "check_in_later_reviews": "Reviews should indicate that combat feels more responsive and engaging, with players noting improved fluidity and satisfaction in combat interactions.",
+  "ids_returned": 6,
+  "form_ok": true,
+  "quotes": [
+   "the combat mechanics are clunky",
+   "The combat mechanics can feel clunky and unpolished at times",
+   "战斗有些僵硬"
+  ]
+ },
+ {
+  "subtheme": "Movement and Evasion",
+  "group": "Repair first",
+  "n_extracts": 40,
+  "seconds": 25.4,
+  "error": null,
+  "requirement": "The game must improve the responsiveness and fluidity of movement controls, including dodging, jetpacking, and enemy engagement, to ensure smooth and intuitive player interactions.",
+  "proposed_change": "Refine the movement mechanics to eliminate jankiness and improve responsiveness, allowing for more precise dodging and jetpacking. This could involve optimizing animations and control inputs to reduce delays and increase fluidity.",
+  "check_in_later_reviews": "Reviews should indicate that players experience smoother and more responsive movement, with fewer complaints about control lag and animation issues.",
+  "ids_returned": 7,
+  "form_ok": true,
+  "quotes": [
+   "Movement is off and it just throws everything off",
+   "Жуткая неотзывчивость управления: срабатывающие через раз быстрые сохранения, не прожимающаяся вовремя атака, сюда же – пропадающие эликсиры из-за врагов, сбивающих анимацию",
+   "the movement itself is already fairly janky"
+  ]
+ },
+ {
+  "subtheme": "Enemy Strength and Balance",
+  "group": "Repair first",
+  "n_extracts": 40,
+  "seconds": 21.8,
+  "error": null,
+  "requirement": "The game must adjust enemy damage output and health scaling to ensure that players can effectively engage and defeat enemies without being one-shot or requiring excessive time to defeat.",
+  "proposed_change": "Implement a rebalancing of enemy health and damage values to create a more gradual difficulty curve, allowing players to feel progression and mastery over time.",
+  "check_in_later_reviews": "Reviews should indicate that players experience a more balanced challenge, with enemies being neither too easy nor overwhelmingly difficult, and that players feel their character's progression is meaningful.",
+  "ids_returned": 19,
+  "form_ok": true,
+  "quotes": [
+   "the enemies eat you alive",
+   "98% of the enemies will 1 SHOT YOU",
+   "The balance of this game is horrendous"
+  ]
+ },
+ {
+  "subtheme": "Performance and Technical Implementation",
+  "group": "Repair first",
+  "n_extracts": 40,
+  "seconds": 23.1,
+  "error": null,
+  "requirement": "The game must be optimized to ensure stable performance across a wide range of hardware configurations, including modern GPUs and platforms like the Steam Deck.",
+  "proposed_change": "Implement comprehensive performance optimization and testing, focusing on reducing lag, improving frame rates, and fixing known glitches and bugs. This includes optimizing code for better resource management and conducting extensive QA and playtesting to identify and resolve technical issues.",
+  "check_in_later_reviews": "Reviews should indicate improved stability, reduced lag, and fewer technical issues, with players noting a smoother and more responsive gameplay experience.",
+  "ids_returned": 29,
+  "form_ok": true,
+  "quotes": [
+   "Оптимизация в игре не какая",
+   "геймплей страдает из-за плохой технической части",
+   "плохо в ней техническая часть"
+  ]
+ },
+ {
+  "subtheme": "Control and Customization",
+  "group": "Repair first",
+  "n_extracts": 38,
+  "seconds": 20.2,
+  "error": null,
+  "requirement": "The game must allow full customization of keybindings, including the ability to remap all keys and hotbar slots, and provide intuitive control schemes for both keyboard and gamepad users.",
+  "proposed_change": "Implement a comprehensive keybinding menu that allows players to remap all controls, including weapon switching, camera control, and interaction keys. Ensure that the control schemes are intuitive and responsive for both keyboard and gamepad users.",
+  "check_in_later_reviews": "Reviews should indicate that players find the controls more intuitive and customizable, with fewer complaints about clunky or unresponsive controls.",
+  "ids_returned": 16,
+  "form_ok": true,
+  "quotes": [
+   "Steuerung einfach nur schlecht",
+   "some controls feel strange",
+   "Some keys are 'locked' (meaning you cannot change them)"
+  ]
+ },
+ {
+  "subtheme": "Crash and Stability",
+  "group": "Repair first",
+  "n_extracts": 30,
+  "seconds": 19.3,
+  "error": null,
+  "requirement": "The game must ensure stability by preventing crashes and freezes during gameplay, including during key sequences and dialogues.",
+  "proposed_change": "Implement comprehensive stability testing and debugging to identify and fix crash-inducing bugs, particularly those occurring during critical game moments such as dialogues with Thorald and final cutscenes.",
+  "check_in_later_reviews": "Reviews should indicate a significant reduction in crash frequency and improved game stability, with players noting fewer instances of game freezes and crashes to desktop.",
+  "ids_returned": 5,
+  "form_ok": true,
+  "quotes": [
+   "ein paar Mal ist das Game zum Desktop abgestürzt",
+   "Баг в финале игры: ближе к концу игры есть одна катсцена. Перед самой развязкой. Так вот у меня под конец этой катсцены игра багнулась с какой-то всратой ошибок и засофтлочилась",
+   "Beim Dialog mit Thorald hängte sich bei mir das Spiel gelegentlich auf"
+  ]
+ },
+ {
+  "subtheme": "Story Engagement",
+  "group": "Protect",
+  "n_extracts": 40,
+  "seconds": 18.6,
+  "error": null,
+  "requirement": "Preserve the impact of player choices on the storyline and quest outcomes to maintain player engagement and satisfaction.",
+  "proposed_change": "When modifying quest structures or dialogue options, ensure that changes do not reduce the number of meaningful choices available to players.",
+  "check_in_later_reviews": "Reviews should continue to highlight the significance of player choices and their consequences on the game's narrative and world.",
+  "ids_returned": 5,
+  "form_ok": true,
+  "quotes": [
+   "Wie man handelt hat Konsequenzen",
+   "I haven't been so involved in story",
+   "in Elex, choices REALLY DO matter"
+  ]
+ },
+ {
+  "subtheme": "World Building",
+  "group": "Protect",
+  "n_extracts": 40,
+  "seconds": 19.6,
+  "error": null,
+  "requirement": "Preserve the immersive and unique blend of science fiction, fantasy, and post-apocalyptic elements in the game world to maintain player engagement and satisfaction.",
+  "proposed_change": "When modifying the game world, ensure that any changes do not disrupt the established balance between high technology and magic, or the diversity of locations and cultures.",
+  "check_in_later_reviews": "Reviews should continue to highlight the world's creativity, diversity, and the seamless integration of different thematic elements without noting a loss of immersion or uniqueness.",
+  "ids_returned": 7,
+  "form_ok": true,
+  "quotes": [
+   "The game world is interesting",
+   "the world really feels alive",
+   "Unique sci-fi setting"
+  ]
+ },
+ {
+  "subtheme": "Factions and Lore",
+  "group": "Protect",
+  "n_extracts": 40,
+  "seconds": 19.6,
+  "error": null,
+  "requirement": "Preserve the distinctiveness and moral ambiguity of the factions to maintain player immersion and engagement.",
+  "proposed_change": "When modifying faction-related content, ensure that each faction retains its unique characteristics and worldview, such as the Berserkers' focus on healing the planet, the Outlaws' reliance on modern weapons, and the Clerics' futuristic technology.",
+  "check_in_later_reviews": "Reviews should continue to highlight the immersive and engaging nature of the factions, without any indication of diminished distinctiveness or moral complexity.",
+  "ids_returned": 3,
+  "form_ok": true,
+  "quotes": [
+   "Wenn man bei den Berserkern ist, wünscht man sich, es gäbe ein eigenes Rollenspiel, in dem man als germanischer Stammeskrieger um 100 nach Christus spielen kann",
+   "Love the faction system and the moral ambiguity everywhere",
+   "The medieval Berserkers who wish to heal the planet, the Outlaws, with their thievery, lack of trust, and the variety of modern weapons and explosives, and the Clerics, a more futuristic faction utilising plasma and laser weapons, followers of their own god"
+  ]
+ },
+ {
+  "subtheme": "Exploration and Resource Management",
+  "group": "Protect",
+  "n_extracts": 40,
+  "seconds": 18.6,
+  "error": null,
+  "requirement": "Preserve the rewarding nature of exploration by ensuring that exploration consistently leads to discovering new items, weapons, and events.",
+  "proposed_change": "Verify that any modifications to the game's exploration mechanics do not reduce the frequency or variety of discoveries made during exploration.",
+  "check_in_later_reviews": "Reviews should continue to highlight the rewarding and enjoyable aspects of exploration, without indicating a decrease in the discovery of new items, weapons, or events.",
+  "ids_returned": 3,
+  "form_ok": true,
+  "quotes": [
+   "Just running around and looking around every corner will let you discover new items, weapons and events",
+   "Exploration in this game is outstanding, with interesting places to explore all over the map",
+   "Exploring the world is amazing"
+  ]
+ },
+ {
+  "subtheme": "Character Growth and Replayability",
+  "group": "Protect",
+  "n_extracts": 40,
+  "seconds": 18.6,
+  "error": null,
+  "requirement": "Preserve the sense of character progression and replayability by ensuring that character growth remains noticeable and satisfying across multiple playthroughs.",
+  "proposed_change": "When modifying character progression mechanics, ensure that the sense of growth and the variety of progression paths remain intact.",
+  "check_in_later_reviews": "Reviews should continue to highlight the noticeable and satisfying character growth and the game's replayability without any decline in these aspects.",
+  "ids_returned": 4,
+  "form_ok": true,
+  "quotes": [
+   "можно переигрывать много раз",
+   "развитие персонажа круто ощущается в процессе",
+   "Roleplaying aspect and replayability is strong in this game"
+  ]
+ },
+ {
+  "subtheme": "Gameplay Duration and Engagement",
+  "group": "Protect",
+  "n_extracts": 40,
+  "seconds": 18.9,
+  "error": null,
+  "requirement": "Preserve the game's ability to engage players for extended periods by ensuring that progression and exploration remain rewarding and challenging.",
+  "proposed_change": "Consider adjusting the pacing of skill progression and exploration rewards to maintain player interest over long play sessions.",
+  "check_in_later_reviews": "Reviews should indicate that players continue to find the game engaging and rewarding over extended play sessions without feeling repetitive or overly difficult.",
+  "ids_returned": 6,
+  "form_ok": true,
+  "quotes": [
+   "got me hooked to the screen 23 hrs straight so far",
+   "On my first run it was more than 100 hours of fun and exploring",
+   "Previously impossible fights gradually become easier as you, and your skills, progress"
+  ]
+ },
+ {
+  "subtheme": "Early Game Difficulty",
+  "group": "Accepted friction",
+  "n_extracts": 40,
+  "seconds": 19.7,
+  "error": null,
+  "requirement": "Keep the early game difficulty as a core challenge, but clearly communicate its role in the game's design and player progression.",
+  "proposed_change": "Introduce an in-game tutorial or narrative element that frames the early game difficulty as a deliberate design choice to enhance player skill development and immersion. This could be achieved through character dialogue or a prologue that sets expectations about the challenge.",
+  "check_in_later_reviews": "Reviews should indicate that players understand and appreciate the early game difficulty as a meaningful part of the game's challenge, without feeling unfairly punished or misled.",
+  "ids_returned": 5,
+  "form_ok": true,
+  "quotes": [
+   "你打不动它但是它打你只需要1-2下你就必死",
+   "dont go into this expecting to beat anything in combat until after you have levelled up a lot via questing and evading all mobs",
+   "The game is hard AF"
+  ]
+ },
+ {
+  "subtheme": "Overall Difficulty and Mastery",
+  "group": "Accepted friction",
+  "n_extracts": 40,
+  "seconds": 20.9,
+  "error": null,
+  "requirement": "Keep the overall difficulty and mastery as a core challenge of the game, ensuring it is communicated as a deliberate design choice that enhances the player's sense of achievement.",
+  "proposed_change": "Introduce a narrative or tutorial element early in the game that frames the difficulty as a key part of the game's identity, emphasizing the rewarding nature of overcoming challenges. This could include dialogue or lore that highlights the game's world as one where only the most skilled and persistent can thrive.",
+  "check_in_later_reviews": "Reviews should reflect an understanding and appreciation of the game's difficulty as a core feature, with fewer mentions of frustration and more emphasis on the satisfaction derived from mastering the game.",
+  "ids_returned": 6,
+  "form_ok": true,
+  "quotes": [
+   "This can both create interesting situations that you can exploit, as well as frustration",
+   "There is no challenge here, no mastery",
+   "Its a hard RPG"
+  ]
+ }
+]

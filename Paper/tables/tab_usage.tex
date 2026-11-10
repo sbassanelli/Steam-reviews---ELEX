@@ -1,0 +1,43 @@
+\begin{table*}[ht]
+  \centering
+  \footnotesize
+  \caption{Running the pipeline: what each step scales with, the time it took for 1,200 reviews sampled from 11,092 judged by the filter, and what the team has to do. Phases as in Figure~\ref{fig:pipeline}. Encoding ran one request at a time, harmonization two. $^{a}$Not logged.}
+  \label{tab:usage}
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  \setlength{\aboverulesep}{0pt}
+  \setlength{\belowrulesep}{0pt}
+  \setlength{\dashlinedash}{2pt}
+  \setlength{\dashlinegap}{2pt}
+  \begin{adjustbox}{max width=\linewidth, max totalheight=0.85\textheight}
+  \begin{tabular}{l l l >{\raggedright\arraybackslash}p{0.3\textwidth}}
+    \toprule
+    \rowcolor{prHead}
+    \textbf{Step} & \textbf{Scales with} & \textbf{Time} & \textbf{What the team does} \\
+    \arrayrulecolor{black}\midrule
+    \prgroup{4}{prMint}{prMintIcon}{\faDatabase}{Phase A: corpus and sampling}{} \\
+    Collection & Corpus & \textbf{under 1 h$^{a}$} & Give the Steam app id \\
+    Cleaning and filter & Corpus (0.55 s per judged review) & \textbf{1 h 41} & Choose the population; rules are preset \\
+    Sampling & -- & \textbf{seconds} & Choose the sample size, or skip \\
+    \arrayrulecolor{prRule}\hdashline
+    \prgroup{4}{prPosBand}{prPosIcon}{\faRobot}{Phase B: coding and checks}{} \\
+    Encoding & Sample (22 s per review) & \textbf{7 h 16} & None, once configured \\
+    Inductive codebook & Nearly fixed & \textbf{45 min} & Read the sub-themes; fix a definition if a theme fails \\
+    Harmonization & Reviews with extracts (18 s each) & \textbf{about 5 h} & None \\
+    Assignment and checks & Distinct codes & \textbf{1 h 26} & Read the flagged sub-themes \\
+    \arrayrulecolor{prRule}\hdashline
+    \prgroup{4}{prPeach}{prPeachIcon}{\faLightbulb}{Phase C: design reading}{} \\
+    Saturation, analysis, triage & -- & \textbf{minutes} & Run the scripts \\
+    Design brief (PDF) & Priorities (about 9 s each) & \textbf{about 2.5 min} & Accept, modify or reject each requirement \\
+    \arrayrulecolor{black}\midrule
+    \rowcolor{prTotal}
+    \textbf{Machine time} & & \textbf{about 16 h} & \\
+    \arrayrulecolor{prRule}\hdashline
+    \prgroup{4}{prButter}{prButterIcon}{\faUsers}{Work by people}{} \\
+    Configuration & Study & \multicolumn{2}{l}{Define themes, write few-shot examples \textbf{[TO COMPLETE: hours]}} \\
+    Design reading & Priorities & \multicolumn{2}{l}{Read the extracts of each priority, decide \textbf{[TO COMPLETE: hours]}} \\
+    Human validation & Subsample & \multicolumn{2}{l}{Blind coding of a subsample of reviews \textbf{[TO COMPLETE: hours]}} \\
+    \arrayrulecolor{black}\bottomrule
+  \end{tabular}
+  \end{adjustbox}
+\end{table*}
