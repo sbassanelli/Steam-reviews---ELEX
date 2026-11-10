@@ -1,8 +1,8 @@
 # Steam reviews of ELEX: data and results
 
 Data, intermediate outputs, results and analysis scripts of the use case of the paper: the Steam reviews of *ELEX*
-(Piranha Bytes, 2017; Steam app 411300), analyzed with the review pipeline published in a separate repository.
-<!-- TODO: link to the pipeline repository (anonymized link during review). -->
+(Piranha Bytes, 2017; Steam app 411300), analyzed with the review pipeline published in a separate repository:
+[Design practices from Steam reviews](https://github.com/sbassanelli/Design-practices-from-Steam-reviews).
 
 Everything needed to check or reproduce the numbers, tables and figures of the paper is here: the reviews, every model output, the
 codebook, the final coded extracts, the design brief, and the scripts that compute the results.
@@ -11,8 +11,9 @@ codebook, the final coded extracts, the design brief, and the scripts that compu
 
 - **Source:** public Steam reviews, collected on 5–6 November 2026 through the public store review endpoint
   (`store.steampowered.com/ajaxappreviews/411300`), all languages: 19,645 of the 19,646 reviews reported by Steam.
-- **No author identifiers.** Steam ids and profile data were not stored; the files keep the review text and the fields that Steam
-  publishes with it (language, date, recommendation, playtime of the author, purchase type, votes).
+- **Author identifiers:** author Steam ids and profiles were not stored. Reviews keep their public Steam review id
+  (`recommendationid`), their text and the fields that Steam publishes with them (language, date, recommendation, playtime of the
+  author, purchase type, votes).
 - **Population:** copies bought on Steam, excluding copies declared as received for free.
 
 | Step | Reviews |
@@ -109,4 +110,4 @@ The codebook of *System* failed the codebook test (16.2% of codes unassigned, mo
 
 ## License
 
-<!-- TODO: choose a license for the data and results (for example CC BY 4.0) and for the scripts (for example MIT). -->
+Data, outputs and results: CC BY 4.0; code: MIT. See [LICENSE-DATA.md](LICENSE-DATA.md) and [LICENSE](LICENSE).
