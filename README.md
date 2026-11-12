@@ -80,6 +80,7 @@ python ../scripts/06_analysis.py          # themes, sub-themes, models, comparis
 python ../scripts/09_design_triage.py     # triage groups -> results/design_triage.csv
 python ../scripts/14_sample_size_cost.py  # cost and yield of smaller samples -> results/sample_size_cost.csv
 python ../scripts/16_extract_specificity.py  # LLM: what each extract offers to design -> results/extract_specificity*.csv
+python ../scripts/17_hidden_problems.py      # loud and scattered problems -> results/hidden_problems.csv
 python ../scripts/04_saturation.py        # saturation (embeddings) -> results/saturation_*.csv
 python ../scripts/07_tables.py            # tables -> Paper/tables
 python ../scripts/08_figures.py           # figures -> Paper/figures
