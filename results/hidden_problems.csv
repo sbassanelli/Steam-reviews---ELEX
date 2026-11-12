@@ -1,0 +1,12 @@
+block,reviews,recommend_%,median_hours_at_review,share_of_not_recommending_%,share_of_reviews_under_5h_%,negative_extracts,specific_or_suggestion_%,share_of_all_reviews_%
+mechanics,454,53.7,33.5,58.3,40.3,969.0,58.5,
+four most negative themes,562,62.3,35.2,58.9,45.3,1159.0,60.0,
+mechanics only,170,54.7,23.7,21.4,22.4,,,
+four themes only,278,71.6,33.6,21.9,27.4,,,
+both,284,53.2,37.1,36.9,17.9,,,
+neither,468,84.8,32.8,19.7,32.3,,,
+theme MECHANICS,454,,,,40.3,,,37.8
+theme CHALLENGE,374,,,,17.4,,,31.2
+theme UI,108,,,,13.4,,,9.0
+theme SYSTEM,155,,,,16.4,,,12.9
+theme ONBOARDING,139,,,,8.5,,,11.6

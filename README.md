@@ -79,6 +79,8 @@ during harmonization. Model outputs can differ slightly with other versions or h
 python ../scripts/06_analysis.py          # themes, sub-themes, models, comparisons -> results/
 python ../scripts/09_design_triage.py     # triage groups -> results/design_triage.csv
 python ../scripts/14_sample_size_cost.py  # cost and yield of smaller samples -> results/sample_size_cost.csv
+python ../scripts/16_extract_specificity.py  # LLM: what each extract offers to design -> results/extract_specificity*.csv
+python ../scripts/17_hidden_problems.py      # loud and scattered problems -> results/hidden_problems.csv
 python ../scripts/04_saturation.py        # saturation (embeddings) -> results/saturation_*.csv
 python ../scripts/07_tables.py            # tables -> Paper/tables
 python ../scripts/08_figures.py           # figures -> Paper/figures
@@ -101,6 +103,15 @@ python 4_design_brief.py --config study_config_sample.json  # LLM: design brief
 
 followed by the scripts above. In the pipeline repository, steps 03 and 05 are merged into `3_subtheme_assignment.py`, saturation is
 `4_saturation.py` and the brief is `5_design_brief.py`; the procedure is the same.
+
+## What reviews offer to design
+
+`scripts/16_extract_specificity.py` labels each of the 5,962 coded extracts, with Phi-4 and Gemma 4 separately, as a **judgment**
+(an evaluation without saying what causes it), **specific** (a concrete element, cause, moment, value or behaviour of the game) or a
+**suggestion** (a proposed change); a second pass splits suggestions into proposals to the developers and advice to other players.
+The final label is Phi-4's; agreement between the two models is Cohen's kappa = 0.52 (74% identical labels).
+`results/extract_specificity.csv` has one row per extract with both labels; `results/extract_specificity_summary.csv` gives the shares
+by polarity, triage group and theme.
 
 ## The one manual step
 
